@@ -1,0 +1,20 @@
+/* helpers */
+@import (reference) "../../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../../assets/less/helpers/_mixins.less";
+
+/* base styles */
+@import "../../../../assets/less/base/_typography.less";
+
+.excellent-tasks-done {
+  text-align: center;
+
+  &__text {
+    font: 300 30px/42px "Roboto", sans-serif;
+    letter-spacing: 0;
+    color: @nepal;
+    margin: 78px 0 112px 0;
+    @media @breakpoint-mobile {
+      margin: 32px 0 120px 0;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+/* helpers */
+@import (reference) "../../../assets/less/helpers/_variables.less";
+
+/* base styles */
+@import "../../../assets/less/base/_typography.less";
+
+////////////////////////////////////
+//my mixins
+//One color for every state
+.hover_focus_active(@color) {
+  &:hover,
+  &:focus,
+  &:active {
+    color: @color;
+  }
+}
+
+//Color for icon buttons
+.hover_focus_active_icon_panel-buttons() {
+  &:hover {
+    color: @nepal;
+  }
+  &:focus {
+    color: @spray;
+  }
+  &:active {
+    color: @silver;
+  }
+}
+
+//Different states for buttons
+.state_for_green_button() {
+  background: @low;
+  &:hover {
+    background: @low-active;
+  }
+  &:focus {
+    background: @deep-sea;
+  }
+  &:active {
+    background: @deep-sea;
+  }
+}
+
+.state_for_blue_button() {
+  background: @education;
+  &:hover {
+    background: @education-active;
+  }
+  &:focus {
+    background: @pelorous;
+  }
+  &:active {
+    background: @pelorous;
+  }
+}
+
+.state_for_red_button() {
+  background: @urgent;
+  &:hover {
+    background: @urgent-active;
+  }
+  &:focus {
+    background: @mahogany;
+  }
+  &:active {
+    background: @mahogany;
+  }
+}
+
+//General mixin for buttons
+.styles_for_buttons(@width,@max-width,@padding_l_r,@margin_l,@margin_r) {
+  width: @width;
+  font-family: "PT Sans", sans-serif;
+  color: @white;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  letter-spacing: 0;
+  padding: 24px 0;
+  font-size: 24px;
+  line-height: 24px;
+  @media @breakpoint-mobile {
+    max-width: @max-width;
+    padding: 12px @padding_l_r;
+    font-size: 18px;
+    line-height: 20px;
+    margin-left: @margin_l;
+    margin-right: @margin_r;
+  }
+}
+
+

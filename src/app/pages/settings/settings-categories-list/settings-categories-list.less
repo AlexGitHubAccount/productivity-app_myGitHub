@@ -1,0 +1,51 @@
+/* helpers */
+@import (reference) "../../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../../assets/less/helpers/_mixins.less";
+
+/* base styles */
+@import "../../../../assets/less/base/_typography.less";
+
+.categories-list {
+  padding-left: 0;
+
+  &__item {
+    font: 400 22px/24px "Roboto", sans-serif;
+    border-bottom: 1px solid @border-color-item-categories-list;
+    padding: 40px 0 12px 10px;
+    letter-spacing: 0;
+    color: @nepal;
+    max-width: 480px;
+    width: 100%;
+
+    @media @breakpoint-mobile {
+      font: 400 16px/16px "Roboto", sans-serif;
+      width: 252px;
+    }
+
+    &:nth-child(1) {
+      display: list-item;
+      list-style: square outside url("../../../../assets/images/settings/marker-orange.png");
+      padding-top: 0;
+    }
+
+    &:nth-child(2) {
+      display: list-item;
+      list-style: square outside url("../../../../assets/images/settings/marker-blue.png");
+    }
+
+    &:nth-child(3) {
+      display: list-item;
+      list-style: square outside url("../../../../assets/images/settings/marker-purple.png");
+    }
+
+    &:nth-child(4) {
+      display: list-item;
+      list-style: square outside url("../../../../assets/images/settings/marker-red.png");
+    }
+
+    &:nth-child(5) {
+      display: list-item;
+      list-style: square outside url("../../../../assets/images/settings/marker-aqua.png");
+    }
+  }
+}

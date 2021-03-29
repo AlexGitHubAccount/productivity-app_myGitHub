@@ -1,0 +1,472 @@
+//General css rules for page settings
+//.settings-general-flex-wrapper {
+//  display: flex;
+//  flex-direction: column;
+//
+//  &__header {
+//    margin-top: 48px;
+//
+//    @media @breakpoint-mobile {
+//      margin-top: 46px;
+//    }
+//  }
+//
+//  &__settings-heading-h1 {
+//    margin-top: -30px;
+//
+//    @media @breakpoint-mobile {
+//      margin-top: 18px;
+//    }
+//  }
+//
+//  &__settings-tabs {
+//    margin-top: 46px;
+//
+//    @media @breakpoint-mobile {
+//      margin-top: 26px;
+//    }
+//
+//    @media @breakpoint-desktop {
+//      margin-top: 32px;
+//    }
+//  }
+//
+//  &__settings-heading-h2 {
+//    margin-top: 44px;
+//
+//    @media @breakpoint-mobile {
+//      margin-top: -23px;
+//    }
+//  }
+//
+//  &__categories-list {
+//    margin: 64px 3% 271px;
+//
+//    @media @breakpoint-mobile {
+//      margin: 96px auto 80px;
+//    }
+//  }
+//
+//  &__settings-button-go-to-tasks {
+//    margin-bottom: 48px;
+//
+//    @media @breakpoint-mobile {
+//      margin: 0 auto 135px;
+//    }
+//
+//    @media @breakpoint-desktop {
+//      margin: 0 auto 151px;
+//    }
+//
+//  }
+//
+//  &__settings-time-iteration {
+//    margin: 64px auto;
+//
+//    @media @breakpoint-mobile {
+//      margin: 96px auto 24px;
+//    }
+//  }
+//
+//  &__your-cycle {
+//    margin-bottom: 70px;
+//
+//    @media @breakpoint-mobile {
+//      margin-bottom: 40px;
+//    }
+//  }
+//
+//  &__pomodoros-buttons {
+//    margin-bottom: 48px;
+//  }
+//} //+
+
+//General components for whole page
+//.settings-heading-h1 {
+//  font: 500 32px/36px "Roboto", sans-serif;
+//  letter-spacing: 0.7px;
+//  color: @white;
+//
+//  @media @breakpoint-mobile {
+//    font: 500 28px/32px "Roboto", sans-serif;
+//    text-align: center;
+//    letter-spacing: 0.7px;
+//  }
+//
+//} //+
+
+//.settings-tabs {
+//  display: flex;
+//  justify-content: flex-end;
+//
+//  &__pomodoros {
+//    background: @general-background;
+//    font: 400 22px/24px "PT Sans", sans-serif;
+//    letter-spacing: 0;
+//    outline: none;
+//    border: none;
+//    padding: 0 16px 0 0;
+//    color: @nepal;
+//    .hover_focus_active(@spray);
+//
+//    @media @breakpoint-mobile {
+//      font-size: 16px;
+//      font-weight: 400;
+//      line-height: 16px;
+//      padding: 0 8px 0 0;
+//    }
+//  }
+//
+//  &__separate-line {
+//    width: 1px;
+//    height: 16px;
+//    background: @nepal;
+//    margin-top: 7px;
+//
+//    @media @breakpoint-mobile {
+//      height: 12px;
+//      margin-top: 5px;
+//    }
+//  }
+//
+//  &__categories {
+//    background: @general-background;
+//    font: 400 22px/24px "PT Sans", sans-serif;
+//    border: none;
+//    letter-spacing: 0;
+//    outline: none;
+//    padding: 2px 0 0 16px;
+//    color: @nepal;
+//    .hover_focus_active(@spray);
+//
+//    @media @breakpoint-mobile {
+//      padding: 2px 0 0 8px;
+//      font: 400 16px/16px "PT Sans", sans-serif;
+//    }
+//  }
+//} //+
+
+//.settings-heading-h2 {
+//  font: 300 28px/32px "Roboto", sans-serif;
+//  position: relative;
+//  z-index: -1;
+//  letter-spacing: 0.55px;
+//  color: @nepal;
+//  text-align: center;
+//
+//  @media @breakpoint-mobile {
+//    font: 300 22px/28px "Roboto", sans-serif;
+//    letter-spacing: 0.55px;
+//  }
+//} //+
+
+//Categories
+//.categories-list {
+//  padding-left: 0;
+//
+//  &__item {
+//    font: 400 22px/24px "Roboto", sans-serif;
+//    border-bottom: 1px solid @border-color-item-categories-list;
+//    padding: 40px 0 12px 10px;
+//    letter-spacing: 0;
+//    color: @nepal;
+//    max-width: 480px;
+//    width: 100%;
+//
+//    @media @breakpoint-mobile {
+//      font: 400 16px/16px "Roboto", sans-serif;
+//      width: 252px;
+//    }
+//
+//    &:nth-child(1) {
+//      display: list-item;
+//      list-style: square outside url("../../images/settings/marker-orange.png");
+//      padding-top: 0;
+//    }
+//
+//    &:nth-child(2) {
+//      display: list-item;
+//      list-style: square outside url("../../images/settings/marker-blue.png");
+//    }
+//
+//    &:nth-child(3) {
+//      display: list-item;
+//      list-style: square outside url("../../images/settings/marker-purple.png");
+//    }
+//
+//    &:nth-child(4) {
+//      display: list-item;
+//      list-style: square outside url("../../images/settings/marker-red.png");
+//    }
+//
+//    &:nth-child(5) {
+//      display: list-item;
+//      list-style: square outside url("../../images/settings/marker-aqua.png");
+//    }
+//  }
+//} //+
+
+//.settings-button-go-to-tasks {
+//  .styles_for_buttons(100%, 151px, 31px, auto, auto);
+//  .state_for_blue_button();
+//} //+
+
+////////////////////////////
+//Pomodoros
+//.settings-time-iteration {
+//  @media @breakpoint-mobile {
+//    display: flex;
+//    flex-wrap: wrap;
+//    justify-content: space-between;
+//  }
+//
+//  padding: 0;
+//
+//  &__item {
+//    display: list-item;
+//    @media @breakpoint-mobile {
+//      width: 45%;
+//    }
+//
+//    &_orange {
+//      list-style: square outside url("../../images/settings/marker-orange.png");
+//
+//      @media @breakpoint-mobile {
+//        text-align: right;
+//        list-style: square inside url("../../images/settings/marker-orange.png");
+//      }
+//    }
+//
+//    &_aqua {
+//      list-style: square outside url("../../images/settings/marker-aqua.png");
+//    }
+//
+//    &_blue {
+//      list-style: square outside url("../../images/settings/marker-blue.png");
+//
+//      @media @breakpoint-mobile {
+//        text-align: right;
+//        list-style: square inside url("../../images/settings/marker-blue.png");
+//      }
+//    }
+//
+//    &_purple {
+//      list-style: square outside url("../../images/settings/marker-purple.png");
+//    }
+//  }
+//
+//  &__text {
+//    font: 400 16px/16px "PT Sans", sans-serif;
+//    padding: 0 52px 0 14px;
+//    letter-spacing: 0;
+//    color: @white;
+//
+//    @media @breakpoint-mobile {
+//      font: 400 14px/16px "PT Sans", sans-serif;
+//      padding-left: 0;
+//    }
+//
+//    &_size_l {
+//      padding-right: 22px;
+//    }
+//    &_size_m {
+//      padding-right: 40px;
+//    }
+//  }
+//
+//  &__input {
+//    display: inline-block;
+//    padding-bottom: 8px;
+//    width:131px;
+//    text-align: center;
+//    font: 400 16px/16px "Roboto", sans-serif;
+//    letter-spacing: 0;
+//    color: @nepal;
+//    .hover_focus_active(@spray);
+//
+//    @media @breakpoint-mobile {
+//      width: 71px;
+//    }
+//    &-wrapper{
+//      display: inline-block;
+//      max-width: 160px;
+//      border-bottom: 1px solid @nepal;
+//      margin-right: 65px;
+//      @media @breakpoint-mobile {
+//        max-width: 100px;
+//      }
+//    }
+//    &-icon-minus {
+//      display: inline-block;
+//      color: @nepal;
+//      font-size: 10px;
+//      cursor: pointer;
+//      .hover_focus_active(@spray);
+//    }
+//
+//    &-icon-add {
+//      display: inline-block;
+//      color:@nepal;
+//      font-size: 10px;
+//      cursor: pointer;
+//      .hover_focus_active(@spray);
+//    }
+//  }
+//
+//  &__text-select-range {
+//    margin: 20px 0 48px 0;
+//    padding-left: 14px;
+//    font: 400 16px/16px "PT Sans", sans-serif;
+//    letter-spacing: 0;
+//    color: @nepal;
+//
+//    @media @breakpoint-mobile {
+//      font: 400 14px/16px "PT Sans", sans-serif;
+//      padding-left: 0;
+//    }
+//
+//    &_without_padding-bottom {
+//      margin-bottom: 0;
+//    }
+//
+//    &-inner {
+//      color: @white;
+//    }
+//  }
+//} //+
+
+//.your-cycle {
+//
+//  &__title {
+//    padding-bottom: 24px;
+//    font: 700 26px/32px "PT Sans", sans-serif;
+//    letter-spacing: 0;
+//    text-align: center;
+//    color: @white;
+//
+//    @media @breakpoint-mobile {
+//      font: 700 20px/28px "PT Sans", sans-serif;
+//    }
+//  }
+//
+//  &__graph {
+//    display: flex;
+//    justify-content: space-evenly;
+//    position: relative;
+//    width: 100%;
+//    height: 12px;
+//    max-width: 1224px;
+//    margin: 32px auto 0;
+//    background: @bg-color-your-cycle;
+//
+//    &-block-bottom-points-mobile{
+//      display: flex;
+//      justify-content: space-evenly;
+//      position: relative;
+//      width: 100%;
+//      height: 0;
+//      max-width: 1224px;
+//      @media(min-width: 768px){
+//        display: none;
+//      }
+//    }
+//
+//    &-block-bottom-points-tablet-desktop{
+//      display: none;
+//
+//      @media(min-width: 768px){
+//        display: flex;
+//        justify-content: space-evenly;
+//        position: relative;
+//        width: 100%;
+//        height: 0;
+//        max-width: 1224px;
+//      }
+//    }
+//
+//    &-short-break{
+//      background: @bg-color-your-cycle-short-breaks;
+//    }
+//    &-long-break {
+//      background: @hobby;
+//    }
+//  }
+//
+//  &-time {
+//    font-size: 12px;
+//    color: @nepal;
+//    position: absolute;
+//
+//    &_down {
+//      bottom: -25px;
+//
+//      &::after {
+//        left: 0;
+//        top: -5px;
+//      }
+//    }
+//
+//    &_up {
+//      top: -25px;
+//      left:0;
+//
+//      &::after {
+//        left: 0;
+//        bottom: -5px;
+//      }
+//    }
+//
+//    &_up-right {
+//      top: -25px;
+//      right: 0;
+//
+//      &::after {
+//        right: 0;
+//        bottom: -5px;
+//      }
+//    }
+//
+//    &_first-cycle {
+//      text-align: right;
+//      top: -25px;
+//      width: 120px;
+//      right: 0;
+//
+//      &::after {
+//        bottom: -5px;
+//        right: 0;
+//      }
+//    }
+//
+//    &::after {
+//      content: '';
+//      position: absolute;
+//      width: 4px;
+//      height: 4px;
+//      background: @other;
+//      border-radius: 50%;
+//    }
+//  }
+//} //+
+
+//.pomodoros-buttons {
+//  display: flex;
+//  justify-content: space-between;
+//
+//  @media @breakpoint-mobile {
+//    justify-content: center;
+//  }
+//
+//  &__go-to-tasks {
+//    .styles_for_buttons(48.5%, 151px, 30px, 0, 4%);
+//    .state_for_blue_button();
+//  }
+//
+//  &__save {
+//    .styles_for_buttons(48.5%, 151px, 30px, 0, 0);
+//    .state_for_green_button();
+//  }
+//} //+
+///////////////////////////
+
+

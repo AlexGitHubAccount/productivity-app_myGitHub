@@ -1,0 +1,123 @@
+/* helpers */
+@import (reference) "../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../assets/less/helpers/_mixins.less";
+//
+///* base styles */
+@import "../../../assets/less/base/_typography.less";
+//settings page
+.settings-button-go-to-tasks {
+  .styles_for_buttons(100%, 151px, 31px, auto, auto);
+  .state_for_blue_button();
+}
+
+.pomodoros-buttons {
+  display: flex;
+  justify-content: space-between;
+
+  @media @breakpoint-mobile {
+    justify-content: center;
+  }
+
+  &__go-to-tasks {
+    .styles_for_buttons(48.5%, 151px, 30px, 0, 4%);
+    .state_for_blue_button();
+  }
+
+  &__save {
+    .styles_for_buttons(48.5%, 151px, 30px, 0, 0);
+    .state_for_green_button();
+  }
+}
+
+//task_list page
+//Modal Remove task
+.remove-task-buttons {
+  display: flex;
+  justify-content: space-between;
+  @media @breakpoint-mobile {
+    justify-content: center;
+  }
+
+  &__cancel {
+    .styles_for_buttons(100%, 115px, 32px, 0, 4%);
+    .state_for_blue_button();
+    margin-right: 4%;
+  }
+
+  &__remove {
+    .styles_for_buttons(100%, 125px, 32px, 0, 0);
+    .state_for_red_button();
+  }
+}
+//First entrance page
+.first-time-visit-page__buttons-skip {
+  .styles_for_buttons(48.5%, 97px, 20px, 0, 4%);
+  .state_for_blue_button();
+}
+
+.first-time-visit-page__buttons-go-to-settings {
+  .styles_for_buttons(48.5%, 173px, 20px, 0, 0);
+  .state_for_green_button();
+}
+
+//timer page
+.timer-button-start {
+  &_size_s {
+    .styles_for_buttons(100%, 102px, 31px, auto, auto);
+    .state_for_green_button();
+  }
+
+  &_size_l {
+    .styles_for_buttons(100%, 100%, 0, auto, auto);
+    .state_for_green_button();
+    @media @breakpoint-mobile {
+      .styles_for_buttons(100%, 185px, 30px, auto, auto);
+    }
+  }
+}
+
+//Timer (3,4,5 page)
+.timer-buttons {
+  display: flex;
+  justify-content: space-between;
+
+  @media @breakpoint-mobile {
+    justify-content: center;
+  }
+
+  &__fail-pomodora {
+    .styles_for_buttons(48.5%, 151px, 32px, 0, 4%);
+    .state_for_red_button();
+
+    @media @breakpoint-mobile {
+      .styles_for_buttons(100%, 175px, 29px, 0, 2%);
+    }
+  }
+
+  &__finish-pomodora {
+    .styles_for_buttons(48.5%, 151px, 32px, 0, 0);
+    .state_for_green_button();
+
+    @media @breakpoint-mobile {
+      .styles_for_buttons(100%, 193px, 29px, 0, 2%);
+    }
+  }
+
+  &__start-pomodora {
+    .styles_for_buttons(48.5%, 151px, 32px, 0, 4%);
+    .state_for_green_button();
+
+    @media @breakpoint-mobile {
+      .styles_for_buttons(100%, 185px, 25px, 0, 2%);
+    }
+  }
+
+  &__finish-task {
+    .styles_for_buttons(48.5%, 151px, 32px, 0, 0);
+    .state_for_blue_button();
+
+    @media @breakpoint-mobile {
+      .styles_for_buttons(100%, 148px, 25px, 0, 2%);
+    }
+  }
+}

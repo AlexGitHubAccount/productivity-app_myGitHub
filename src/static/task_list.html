@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Productivity app</title>
+</head>
+<body>
+<!--////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--            Sticky fixed header-->
+<header class="header header-sticky task-list-general-flex-wrapper__header-sticky task-list-general-flex-wrapper__header">
+    <div class="container header-sticky__container">
+        <div class="header-sticky__logo">
+            <img class="header-sticky__logo-svg" src="/images/Logo.svg" alt="logo">
+        </div>
+        <nav class="header__navigation">
+            <ul class="header__navigation-list">
+                <li class="header__navigation-list-add">
+                    <a class="header__navigation-list-link icon-add" href="#">
+                        <span class="tooltip-text">Go to Add Task</span>
+                    </a>
+                </li>
+                <li class="header__navigation-list-trash">
+                    <a class="header__navigation-list-link icon-trash" href="#">
+                        <!--                                <span class="header__navigation-list-link-counter">2</span>-->
+                        <span class="tooltip-text">Go to Remove Tasks</span>
+                    </a>
+                </li>
+                <li class="header__navigation-list-list">
+                    <a class="header__navigation-list-link icon-list active-state-for-elements-white" href="#">
+                        <span class="tooltip-text">Go to Task Lists</span>
+                    </a>
+                </li>
+                <li class="header__navigation-list-statistics">
+                    <a class="header__navigation-list-link icon-statistics" href="#">
+                        <span class="tooltip-text">Go to Reports</span>
+                    </a>
+                </li>
+                <li class="header__navigation-list-settings">
+                    <a class="header__navigation-list-link icon-settings" href="#">
+                        <span class="tooltip-text">Go to Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!--////////////////////////////////////////////////////////////////////////////////////////////-->
+<div class="page">
+    <!--////////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--    Modal Add task-->
+    <!--    <div class="page__modal-wrapper-add-task">-->
+    <!--    <div class="page__modal-add-task">-->
+    <!--    <div class="container">-->
+    <!--        <div class="task-list-modal-general-wrapper">-->
+    <!--<div class="close-check-buttons task-list-modal-general-wrapper__close-check-buttons">-->
+    <!--    <span class="close-check-buttons__close-button icon-close"></span>-->
+    <!--    <span class="close-check-buttons__check-button icon-check"></span>-->
+    <!--</div>-->
+    <!--            <h1 class="add-task-title task-list-modal-general-wrapper__add-task-title">Add Task</h1>-->
+    <!--            <form class="form task-list-modal-general-wrapper__form" action="#" >-->
+    <!--                <div class="form__item">-->
+    <!--                    <label class="form__item-label" for="add-task-form-title" >TITLE</label><br>-->
+    <!--                    <input class="form__item-input" id="add-task-form-title" type="text" placeholder="Add title here">-->
+    <!--                </div>-->
+    <!--                <div class="form__item">-->
+    <!--                    <label class="form__item-label" for="add-task-form-description" >DESCRIPTION</label><br>-->
+    <!--                    <input class="form__item-input" id="add-task-form-description" type="text" placeholder="Add description here">-->
+    <!--                </div>-->
+    <!--                <div class="form__item">-->
+    <!--                    <label class="form__item-label">CATEGORY</label><br>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css">-->
+    <!--                        <input class="form__item-radio" type="radio" name="category" checked>-->
+    <!--                        <span class="form__item-span form__item-span_yellow"></span><span>Work</span>-->
+    <!--                    </label>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="category"><span class="form__item-span form__item-span_malibu"></span><span>Education</span></label>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="category"><span class="form__item-span form__item-span_amethyst"></span><span>Hobby</span></label>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="category"><span class="form__item-span form__item-span_terra-cotta"></span><span>Sport</span></label>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="category"><span class="form__item-span form__item-span_dark-turquoise"></span><span>Other</span></label>-->
+    <!--                </div>-->
+    <!--                <div class="form__item">-->
+    <!--                    <label class="form__item-label" for="add-task-form-deadline" >DEADLINE</label><br>-->
+    <!--                    <input class="form__item-input" id="add-task-form-deadline" type="text" placeholder="May 23, 2021">-->
+    <!--                </div>-->
+    <!--                <div class="form__item">-->
+    <!--                    <label class="form__item-label">ESTIMATION</label><br>-->
+    <!--                    <div class="form__item-estimation">-->
+    <!--                        <img class="form__item-estimation-empty-tomato" src="/images/empty-tomato.svg" alt="tomato">-->
+    <!--                        <img class="form__item-estimation-empty-tomato" src="/images/empty-tomato.svg" alt="tomato">-->
+    <!--                        <img class="form__item-estimation-empty-tomato" src="/images/empty-tomato.svg" alt="tomato">-->
+    <!--                        <img class="form__item-estimation-empty-tomato" src="/images/empty-tomato.svg" alt="tomato">-->
+    <!--                        <img class="form__item-estimation-empty-tomato" src="/images/empty-tomato.svg" alt="tomato">-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="form__item">-->
+    <!--                    <label class="form__item-label">PRIORITY</label><br>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="priority" checked><span class="form__item-span form__item-span_tomato"></span><span>Urgent</span></label>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="priority"><span class="form__item-span form__item-span_yellow-orange"></span><span>High</span></label>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="priority"><span class="form__item-span form__item-span_gorse"></span><span>Middle</span></label>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="priority"><span class="form__item-span form__item-span_mountain-meadow"></span><span>Low</span></label>-->
+    <!--                        </div>-->
+    <!--                    </form>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--////////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--       Modal Edit task-->
+    <!--    <div class="page__modal-wrapper-edit-task">-->
+    <!--    <div class="page__modal-edit-task">-->
+    <!--    <div class="container">-->
+    <!--        <div class="task-list-modal-general-wrapper">-->
+    <!--<div class="close-check-buttons task-list-modal-general-wrapper__close-check-buttons">-->
+    <!--    <span class="close-check-buttons__close-button icon-close"></span>-->
+    <!--    <span class="close-check-buttons__check-button icon-check"></span>-->
+    <!--</div>-->
+    <!--            <h1 class="edit-task-title task-list-modal-general-wrapper__edit-task-title">Edit Task</h1>-->
+    <!--            <form class="form task-list-modal-general-wrapper__form" action="#" >-->
+    <!--                <div class="form__item">-->
+    <!--                    <label class="form__item-label" for="edit-task-form-title" >TITLE</label><br>-->
+    <!--                    <input class="form__item-input" id="edit-task-form-title" type="text" placeholder="Creation a new design">-->
+    <!--                </div>-->
+    <!--                <div class="form__item">-->
+    <!--                    <label class="form__item-label" for="edit-task-form-description" >DESCRIPTION</label><br>-->
+    <!--                    <input class="form__item-input" id="edit-task-form-description" type="text" placeholder="Add description here">-->
+    <!--                </div>-->
+    <!--                <div class="form__item">-->
+    <!--                    <label class="form__item-label">CATEGORY</label><br>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="category" checked><span class="form__item-span form__item-span_yellow"></span><span>Work</span></label>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="category"><span class="form__item-span form__item-span_malibu"></span><span>Education</span></label>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="category"><span class="form__item-span form__item-span_amethyst"></span><span>Hobby</span></label>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="category"><span class="form__item-span form__item-span_terra-cotta"></span><span>Sport</span></label>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="category"><span class="form__item-span form__item-span_dark-turquoise"></span><span>Other</span></label>-->
+    <!--                </div>-->
+    <!--                <div class="form__item">-->
+    <!--                    <label class="form__item-label" for="edit-task-form-deadline" >DEADLINE</label><br>-->
+    <!--                    <input class="form__item-input" id="edit-task-form-deadline" type="text" placeholder="May 23, 2021">-->
+    <!--                </div>-->
+    <!--                <div class="form__item">-->
+    <!--                    <label class="form__item-label">ESTIMATION</label><br>-->
+    <!--                    <div class="form__item-estimation">-->
+    <!--                        <img class="form__item-estimation-empty-tomato" src="/images/empty-tomato.svg" alt="tomato">-->
+    <!--                        <img class="form__item-estimation-empty-tomato" src="/images/empty-tomato.svg" alt="tomato">-->
+    <!--                        <img class="form__item-estimation-empty-tomato" src="/images/empty-tomato.svg" alt="tomato">-->
+    <!--                        <img class="form__item-estimation-empty-tomato" src="/images/empty-tomato.svg" alt="tomato">-->
+    <!--                        <img class="form__item-estimation-empty-tomato" src="/images/empty-tomato.svg" alt="tomato">-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="form__item">-->
+    <!--                    <label class="form__item-label">PRIORITY</label><br>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="priority" checked><span class="form__item-span form__item-span_tomato"></span><span>Urgent</span></label>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="priority"><span class="form__item-span form__item-span_yellow-orange"></span><span>High</span></label>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="priority"><span class="form__item-span form__item-span_gorse"></span><span>Middle</span></label>-->
+    <!--                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="priority"><span class="form__item-span form__item-span_mountain-meadow"></span><span>Low</span></label>-->
+    <!--                        </div>-->
+    <!--                    </form>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--////////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--        Modal Remove task-->
+    <!--    <div class="page__modal-wrapper-remove-task">-->
+    <!--        <div class="page__modal-remove-task">-->
+    <!--            <div class="container">-->
+    <!--                <div class="task-list-modal-general-wrapper">-->
+    <!--                    <div class="close-check-buttons task-list-modal-general-wrapper__close-check-buttons">-->
+    <!--                        <span class="close-check-buttons__close-button icon-close"></span>-->
+    <!--                    </div>-->
+    <!--                    <h1 class="remove-task-title task-list-modal-general-wrapper__remove-task-title">Remove Task</h1>-->
+    <!--                    <p class="text-message task-list-modal-general-wrapper__text-message">Are you sure you want to remove selected task(s)?</p>-->
+    <!--                    <div class="remove-task-buttons task-list-modal-general-wrapper__remove-task-buttons">-->
+    <!--                        <button class="remove-task-buttons__cancel">Cancel</button>-->
+    <!--                        <button class="remove-task-buttons__remove">Remove</button>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--////////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--        Task list-->
+    <div class="container">
+        <div class="task-list-general-flex-wrapper">
+            <header class="header task-list-general-flex-wrapper__header">
+            <div class="header-sticky__logo"></div>
+                <nav class="header__navigation">
+                    <ul class="header__navigation-list">
+                        <li class="header__navigation-list-trash">
+                            <a class="header__navigation-list-link icon-trash" href="#">
+                                <span class="header__navigation-list-link-counter">2</span>
+                                <span class="tooltip-text">Go to Remove Tasks</span>
+                            </a>
+                        </li>
+                        <li class="header__navigation-list-list">
+                            <a class="header__navigation-list-link icon-list active-state-for-elements-white" href="#">
+                                <span class="tooltip-text">Go to Task Lists</span>
+                            </a>
+                        </li>
+                        <li class="header__navigation-list-statistics">
+                            <a class="header__navigation-list-link icon-statistics" href="#">
+                                <span class="tooltip-text">Go to Reports</span>
+                            </a>
+                        </li>
+                        <li class="header__navigation-list-settings">
+                            <a class="header__navigation-list-link icon-settings" href="#">
+                                <span class="tooltip-text">Go to Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <h1 class="task-list-heading-h1 task-list-general-flex-wrapper__task-list-heading-h1">Daily task list<span class="icon-add task-list-heading-h1__icon-add"></span></h1>
+<!--            Daily task list-->
+            <div class="daily-task-list-tabs task-list-general-flex-wrapper__daily-task-list-tabs">
+                <div class="daily-task-list-tabs__left"></div>
+                <div class="daily-task-list-tabs__right">
+                    <button class="daily-task-list-tabs__left-elem active-state-for-elements-white">To Do</button>
+                    <div class="daily-task-list-tabs__separate-line"></div>
+                    <button class="daily-task-list-tabs__right-elem">Done</button>
+                </div>
+            </div>
+            <div class="daily-task-list-content task-list-general-flex-wrapper__daily-tasks-list">
+                <ul class="tasks-list">
+                    <li class="tasks-list__item tasks-list__item_sport">
+                        <div class="tasks-list__item-left">
+                            <span class="tasks-list__item-left_text">TODAY</span>
+<!--                                                        <span class="tasks-list__item-left_trash icon-trash"></span>-->
+<!--                                                        <span class="tasks-list__item-left_remove icon-close"></span>-->
+                        </div>
+                        <div class="tasks-list__item-center">
+                            <div class="tasks-list__item-center-left">
+                                <p class="tasks-list__item-center-left-top tasks-list__item-center-left-top_high">Lorem ipsum sit amet</p>
+                                <p class="tasks-list__item-center-left-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                            </div>
+                            <div class="tasks-list__item-center-right">
+                                <div class="tasks-list__item-center-right-edit icon-edit"></div>
+                                <div class="tasks-list__item-center-right-trash icon-trash"></div>
+                            </div>
+                        </div>
+                        <div class="tasks-list__item-right tasks-list__item-right_high">
+                            <div class="tasks-list__item-right-tomato icon-tomato">
+                                <div class="tasks-list__item-right-tomato-digit">3</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tasks-list__item tasks-list__item_hobby tasks-list__item_done">
+                        <div class="tasks-list__item-left">
+                            <span class="tasks-list__item-left_text">TODAY</span>
+<!--                                                        <span class="tasks-list__item-left_trash icon-trash"></span>-->
+<!--                                                        <span class="tasks-list__item-left_remove icon-close"></span>-->
+                        </div>
+                        <div class="tasks-list__item-center">
+                            <div class="tasks-list__item-center-left">
+                                <p class="tasks-list__item-center-left-top tasks-list__item-center-left-top_urgent tasks-list__item-center-left-top_done">Lorem ipsum sit amet</p>
+                                <p class="tasks-list__item-center-left-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                            </div>
+                            <div class="tasks-list__item-center-right tasks-list__item_done-hidden">
+                                <div class="tasks-list__item-center-right-edit icon-edit"></div>
+                                <div class="tasks-list__item-center-right-trash icon-trash"></div>
+                            </div>
+                        </div>
+                        <div class="tasks-list__item-right tasks-list__item-right_urgent">
+                            <div class="tasks-list__item-right-tomato icon-tomato">
+                                <div class="tasks-list__item-right-tomato-digit">3</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+        </div>
+<!--            Remove daily task list-->
+            <div class="daily-task-list-tabs task-list-general-flex-wrapper__daily-task-list-tabs">
+                <div class="daily-task-list-tabs__left">
+                    <button class="daily-task-list-tabs__left-elem">Select All</button>
+                    <div class="daily-task-list-tabs__separate-line"></div>
+                    <button class="daily-task-list-tabs__right-elem">Deselect All</button>
+                </div>
+                <div class="daily-task-list-tabs__right">
+                    <button class="daily-task-list-tabs__left-elem active-state-for-elements-white">To Do</button>
+                    <div class="daily-task-list-tabs__separate-line"></div>
+                    <button class="daily-task-list-tabs__right-elem">Done</button>
+                </div>
+            </div>
+            <div class="daily-task-list-content task-list-general-flex-wrapper__daily-tasks-list">
+                <ul class="tasks-list">
+                    <li class="tasks-list__item tasks-list__item_hobby">
+                        <div class="tasks-list__item-left tasks-list__item-left_hobby">
+<!--                                                        <span class="tasks-list__item-left_text">TODAY</span>-->
+                            <span class="tasks-list__item-left_trash icon-trash"></span>
+<!--                            <span class="tasks-list__item-left_remove icon-close"></span>-->
+                        </div>
+                        <div class="tasks-list__item-center">
+                            <div class="tasks-list__item-center-left">
+                                <p class="tasks-list__item-center-left-top tasks-list__item-center-left-top_high">Lorem ipsum sit amet</p>
+                                <p class="tasks-list__item-center-left-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                            </div>
+                            <div class="tasks-list__item-center-right">
+                                <div class="tasks-list__item-center-right-edit icon-edit"></div>
+                                <div class="tasks-list__item-center-right-trash icon-trash"></div>
+                            </div>
+                        </div>
+                        <div class="tasks-list__item-right tasks-list__item-right_high">
+                            <div class="tasks-list__item-right-tomato icon-tomato">
+                                <div class="tasks-list__item-right-tomato-digit">3</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tasks-list__item tasks-list__item_hobby-active">
+                        <div class="tasks-list__item-left tasks-list__item-left_hobby-active">
+                            <!--                            <span class="tasks-list__item-left_text">TODAY</span>-->
+                            <!--                            <span class="tasks-list__item-left_trash icon-trash"></span>-->
+                            <span class="tasks-list__item-left_remove icon-close"></span>
+                        </div>
+                        <div class="tasks-list__item-center">
+                            <div class="tasks-list__item-center-left">
+                                <p class="tasks-list__item-center-left-top tasks-list__item-center-left-top_high">Lorem ipsum sit amet</p>
+                                <p class="tasks-list__item-center-left-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                            </div>
+                            <div class="tasks-list__item-center-right">
+                                <div class="tasks-list__item-center-right-edit icon-edit"></div>
+                                <div class="tasks-list__item-center-right-trash icon-trash"></div>
+                            </div>
+                        </div>
+                        <div class="tasks-list__item-right tasks-list__item-right_high">
+                            <div class="tasks-list__item-right-tomato icon-tomato">
+                                <div class="tasks-list__item-right-tomato-digit">3</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+<!--////////////////////////////////////////////////////////////////////////////////////////////&ndash;&gt;-->
+            <!--Block excellent all tasks done-->
+<!--                        <div class="excellent-tasks-done">-->
+<!--                            <div class="excellent-tasks-done__text">Excellent,-->
+<!--                                all daily tasks done :)</div>-->
+<!--                        </div>-->
+            <!--////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--            Block Task added-->
+<!--            <div class="move-tasks-to-daily-task-list">-->
+<!--                <div class="move-tasks-to-daily-task-list__text">Task added,-->
+<!--                    move it to the top 5 in daily task list</div>-->
+<!--                <div class="move-tasks-to-daily-task-list__icon-arrow-circle icon-arrow_circle"></div>-->
+<!--            </div>-->
+            <!--////////////////////////////////////////////////////////////////////////////////////////////-->
+            <!--Global task list-->
+            <div class="global-task-list-title-tabs task-list-general-flex-wrapper__global-task-list-title-tabs">
+                <div class="global-task-list-title-tabs__left">
+                    <button class="global-task-list-title-tabs__elem">Global list</button>
+<!--                    <div class="global-task-list-title-tabs__arrow-right icon-global-list-arrow-right"></div>-->
+                    <div class="global-task-list-title-tabs__arrow-down icon-global-list-arrow-down"></div>
+                </div>
+                <div class="global-task-list-title-tabs__right task-list-general-flex-wrapper__global-task-list-tittle-tabs-right">
+                    <button class="global-task-list-title-tabs__elem active-state-for-elements-white">All</button>
+                    <div class="global-task-list-title-tabs__separate-line"></div>
+                    <button class="global-task-list-title-tabs__elem">Urgent</button>
+                    <div class="global-task-list-title-tabs__separate-line"></div>
+                    <button class="global-task-list-title-tabs__elem">High</button>
+                    <div class="global-task-list-title-tabs__separate-line"></div>
+                    <button class="global-task-list-title-tabs__elem">Middle</button>
+                    <div class="global-task-list-title-tabs__separate-line"></div>
+                    <button class="global-task-list-title-tabs__elem">Low</button>
+                </div>
+            </div>
+            <div class="global-task-list-content task-list-general-flex-wrapper__global-task-list-content">
+                <ul class="global-task-list-content-category global-task-list-content-category_work">
+                    <li class="global-task-list-content-category__title">
+                        <span class="global-task-list-content-category__title_circle global-task-list-content-category__title_circle_work"></span>
+                        <span class="global-task-list-content-category__title_text global-task-list-content-category__title_text_work">WORK</span>
+                    </li>
+                    <li class="tasks-list__item tasks-list__item_work">
+                        <div class="tasks-list__item-left">
+                            <span class="tasks-list__item-left_text">TODAY</span>
+<!--                                                        <span class="tasks-list__item-left_trash icon-trash"></span>-->
+<!--                                                        <span class="tasks-list__item-left_remove icon-close"></span>-->
+                        </div>
+                        <div class="tasks-list__item-center">
+                            <div class="tasks-list__item-center-left">
+                                <p class="tasks-list__item-center-left-top tasks-list__item-center-left-top_high">Lorem ipsum sit amet</p>
+                                <p class="tasks-list__item-center-left-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                            </div>
+                            <div class="tasks-list__item-center-right">
+                                <div class="tasks-list__item-center-right-arrows-up icon-arrows-up"></div>
+                                <div class="tasks-list__item-center-right-edit icon-edit"></div>
+                                <div class="tasks-list__item-center-right-trash icon-trash"></div>
+                            </div>
+                        </div>
+                        <div class="tasks-list__item-right tasks-list__item-right_high">
+                            <div class="tasks-list__item-right-tomato icon-tomato">
+                                <div class="tasks-list__item-right-tomato-digit">3</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tasks-list__item tasks-list__item_work">
+                        <div class="tasks-list__item-left">
+                            <span class="tasks-list__item-left_text tasks-list__item-left_text-overdue">TODAY</span>
+                            <!--                            <span class="tasks-list__item-left_trash icon-trash"></span>-->
+                            <!--                            <span class="tasks-list__item-left_remove icon-close"></span>-->
+                        </div>
+                        <div class="tasks-list__item-center">
+                            <div class="tasks-list__item-center-left">
+                                <p class="tasks-list__item-center-left-top tasks-list__item-center-left-top_high">Lorem ipsum sit amet</p>
+                                <p class="tasks-list__item-center-left-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                            </div>
+                            <div class="tasks-list__item-center-right">
+<!--                                {{#if isArrowBtn}}-->
+                                <div class="tasks-list__item-center-right-arrows-up icon-arrows-up"></div>
+<!--                                {{/if}}-->
+                                <div class="tasks-list__item-center-right-edit icon-edit"></div>
+                                <div class="tasks-list__item-center-right-trash icon-trash"></div>
+                            </div>
+                        </div>
+                        <div class="tasks-list__item-right tasks-list__item-right_high">
+                            <div class="tasks-list__item-right-tomato icon-tomato">
+                                <div class="tasks-list__item-right-tomato-digit">3</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="global-task-list-content-category global-task-list-content-category_education">
+                    <li class="global-task-list-content-category__title">
+                        <span class="global-task-list-content-category__title_circle global-task-list-content-category__title_circle_education"></span>
+                        <span class="global-task-list-content-category__title_text global-task-list-content-category__title_text_education">EDUCATION</span>
+                    </li>
+                    <li class="tasks-list__item tasks-list__item_education">
+                        <div class="tasks-list__item-left">
+                            <span class="tasks-list__item-left_text">TODAY</span>
+                            <!--                            <span class="tasks-list__item-left_trash icon-trash"></span>-->
+                            <!--                            <span class="tasks-list__item-left_remove icon-close"></span>-->
+                        </div>
+                        <div class="tasks-list__item-center">
+                            <div class="tasks-list__item-center-left">
+                                <p class="tasks-list__item-center-left-top tasks-list__item-center-left-top_high">Lorem ipsum sit amet</p>
+                                <p class="tasks-list__item-center-left-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                            </div>
+                            <div class="tasks-list__item-center-right">
+                                <div class="tasks-list__item-center-right-arrows-up icon-arrows-up"></div>
+                                <div class="tasks-list__item-center-right-edit icon-edit"></div>
+                                <div class="tasks-list__item-center-right-trash icon-trash"></div>
+                            </div>
+                        </div>
+                        <div class="tasks-list__item-right tasks-list__item-right_high">
+                            <div class="tasks-list__item-right-tomato icon-tomato">
+                                <div class="tasks-list__item-right-tomato-digit">3</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--////////////////////////////////////////////////////////////////////////////////////////////-->
+            <!--First entrance page-->
+<!--            <div class="first-time-visit-page">-->
+<!--                <img class="first-time-visit-page__icon-svg" src="/images/tomato_settings.svg" alt="tomato_settings">-->
+<!--                <div class="first-time-visit-page__text">As you visited site for a first time you can check and customize your default-->
+<!--                    application settings</div>-->
+<!--                <div class="first-time-visit-page__buttons">-->
+<!--                    <button class="first-time-visit-page__buttons-skip">Skip</button>-->
+<!--                    <button class="first-time-visit-page__buttons-go-to-settings">Go to settings</button>-->
+<!--                </div>-->
+<!--            </div>-->
+            <!--////////////////////////////////////////////////////////////////////////////////////////////-->
+            <!--Add your first task-->
+<!--            <div class="empty-page-add-task">-->
+<!--                <img class="empty-page-add-task__icon-svg" src="/images/tomato-add.svg" alt="tomato-add">-->
+<!--                <div class="empty-page-add-task__text">Add your first task</div>-->
+<!--            </div>-->
+            <!--////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--            No tasks page-->
+<!--            <div class="first-entrance-page">-->
+<!--                <img class="first-entrance-page__icon-svg first-entrance-page__icon-svg-to-do-done" src="/images/tomato-addv02.svg" alt="tomato-addv02">-->
+<!--                <div class="first-entrance-page__text first-entrance-page__text_without-buttons">You don’t have any tasks left.  Add new tasks to stay productive</div>-->
+<!--            </div>-->
+            <!--////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--            Block with all notification messages-->
+<!--            <div class="block-with-notification task-list-general-flex-wrapper__block-with-notification">-->
+<!--                <div class="block-with-notification__item block-with-notification__item_type_no-category">-->
+<!--                    <div class="block-with-notification__item-left block-with-notification__item-left_type_no-category">-->
+<!--                        <div class="block-with-notification__item-left-icon icon-tomato-info"></div>-->
+<!--                    </div>-->
+<!--                    <div class="block-with-notification__item-right">-->
+<!--                        <div class="block-with-notification__item-right-text">This is just an info notification message!</div>-->
+<!--                        <div class="block-with-notification__item-right-icon icon-close"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="block-with-notification__item block-with-notification__item_type_urgent">-->
+<!--                    <div class="block-with-notification__item-left block-with-notification__item-left_type_urgent">-->
+<!--                        <div class="block-with-notification__item-left-icon icon-tomato-error"></div>-->
+<!--                    </div>-->
+<!--                    <div class="block-with-notification__item-right">-->
+<!--                        <div class="block-with-notification__item-right-text">Oops! An error has occured.</div>-->
+<!--                        <div class="block-with-notification__item-right-icon icon-close"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="block-with-notification__item block-with-notification__item_type_high">-->
+<!--                    <div class="block-with-notification__item-left block-with-notification__item-left_type_high">-->
+<!--                        <div class="block-with-notification__item-left-icon icon-tomato-info"></div>-->
+<!--                    </div>-->
+<!--                    <div class="block-with-notification__item-right">-->
+<!--                        <div class="block-with-notification__item-right-text">This is just a warning message!</div>-->
+<!--                        <div class="block-with-notification__item-right-icon icon-close"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="block-with-notification__item block-with-notification__item_type_low">-->
+<!--                    <div class="block-with-notification__item-left block-with-notification__item-left_type_low">-->
+<!--                        <div class="block-with-notification__item-left-icon icon-tomato-success"></div>-->
+<!--                    </div>-->
+<!--                    <div class="block-with-notification__item-right">-->
+<!--                        <div class="block-with-notification__item-right-text">Task was successfully created.</div>-->
+<!--                        <div class="block-with-notification__item-right-icon icon-close"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+            <!--            -->
+        </div>
+    </div>
+</div>
+<script src="/bundle.js"></script>
+</body>
+</html>

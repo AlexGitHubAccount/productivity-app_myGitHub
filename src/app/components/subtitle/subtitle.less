@@ -1,0 +1,31 @@
+/* helpers */
+@import (reference) "../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../assets/less/helpers/_mixins.less";
+//
+///* base styles */
+@import "../../../assets/less/base/_typography.less";
+
+.settings-heading-h2 {
+  font: 300 28px/32px "Roboto", sans-serif;
+  position: relative;
+  z-index: -1;
+  letter-spacing: 0.55px;
+  color: @nepal;
+  text-align: center;
+
+  @media @breakpoint-mobile {
+    font: 300 22px/28px "Roboto", sans-serif;
+    letter-spacing: 0.55px;
+  }
+}
+
+.timer-heading-h2 {
+  font: 400 20px/24px "Roboto", sans-serif;
+  letter-spacing: 0.45px;
+  text-align: center;
+  color: @white;
+
+  @media @breakpoint-mobile {
+    font-size: 18px;
+  }
+}

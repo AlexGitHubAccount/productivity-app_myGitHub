@@ -1,0 +1,35 @@
+/* helpers */
+@import (reference) "../../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../../assets/less/helpers/_mixins.less";
+
+/* base styles */
+@import "../../../../assets/less/base/_typography.less";
+
+//For add first task
+.empty-page-add-task {
+  text-align: center;
+
+  &__icon-svg {
+    width: 212px;
+    height: 212px;
+    margin: 288px 0 64px 0;
+    @media @breakpoint-mobile {
+      width: 164px;
+      height: 164px;
+      margin: 156px 0 64px 0;
+    }
+  }
+
+  &__text {
+    font: 300 36px/48px "Roboto", sans-serif;
+    font-family: "", sans-serif;
+    letter-spacing: 0;
+    color: @nepal;
+    margin-bottom: 353px;
+    @media @breakpoint-mobile {
+      font-size: 30px;
+      line-height: 42px;
+      margin-bottom: 231px;
+    }
+  }
+}

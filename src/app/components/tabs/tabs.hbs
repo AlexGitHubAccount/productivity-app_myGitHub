@@ -1,0 +1,24 @@
+
+    {{#if twoItems}}
+<button class="{{tabs.className_left}} {{tabs.active_stateOne}}">{{tabs.text_left}}</button>
+<div class="{{tabs.className_line}}"></div>
+<button class="{{tabs.className_right}} {{tabs.active_stateTwo}}">{{tabs.text_right}}</button>
+    {{/if}}
+    {{#if fiveItems}}
+        <button class="{{global_list_tabs.className}} {{global_list_tabs.active_stateOne}}">{{global_list_tabs.textOne}}</button>
+        <div class="{{global_list_tabs.className_line}} "></div>
+        <button class="{{global_list_tabs.className}} {{global_list_tabs.active_stateTwo}}">{{global_list_tabs.textTwo}}</button>
+        <div class="{{global_list_tabs.className_line}}"></div>
+        <button class="{{global_list_tabs.className}} {{global_list_tabs.active_stateThree}}">{{global_list_tabs.textThree}}</button>
+        <div class="{{global_list_tabs.className_line}}"></div>
+        <button class="{{global_list_tabs.className}} {{global_list_tabs.active_stateFour}}">{{global_list_tabs.textFour}}</button>
+        <div class="{{global_list_tabs.className_line}}"></div>
+        <button class="{{global_list_tabs.className}} {{global_list_tabs.active_stateFive}}">{{global_list_tabs.textFive}}</button>
+    {{/if}}
+    {{#if threeItems}}
+        <button class="{{reports.className}} {{reports.active_stateOne}}">{{reports.textOne}}</button>
+        <div class="{{reports.className_line}}"></div>
+        <button class="{{reports.className}} {{reports.active_stateTwo}}">{{reports.textTwo}}</button>
+        <div class="{{reports.className_line}}"></div>
+        <button class="{{reports.className}} {{reports.active_stateThree}}">{{reports.textThree}}</button>
+    {{/if}}

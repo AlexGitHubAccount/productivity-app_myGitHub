@@ -1,0 +1,426 @@
+/* helpers */
+@import (reference) "../../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../../assets/less/helpers/_mixins.less";
+
+/* base styles */
+@import "../../../../assets/less/base/_typography.less";
+
+.tasks-list {
+  padding-left: 0;
+  list-style-type: none;
+
+  &__item {
+    display: flex;
+    margin-bottom: 12px;
+    cursor: pointer;
+
+    &_work {
+      border-left: 8px solid @work;
+
+      &-active {
+        border-left: 8px solid @work-active;
+      }
+    }
+
+    &_education {
+      border-left: 8px solid @education;
+
+      &-active {
+        border-left: 8px solid @education-active;
+      }
+    }
+
+    &_hobby {
+      border-left: 8px solid @hobby;
+
+      &-active {
+        border-left: 8px solid @hobby-active;
+      }
+    }
+
+    &_sport {
+      border-left: 8px solid @sport;
+
+      &-active {
+        border-left: 8px solid @sport-active;
+      }
+    }
+
+    &_other {
+      border-left: 8px solid @other;
+
+      &-active {
+        border-left: 8px solid @other-active;
+      }
+    }
+
+    &_done {
+      opacity: 0.7;
+      background: @blur-task-list;
+      box-shadow: 0 5px 8.3px rgba(34, 56, 73, 0.3);
+
+      &-hidden {
+        display: none !important;
+      }
+    }
+
+    @media @breakpoint-mobile {
+    }
+
+    &-left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 88px;
+      background: @white;
+
+      &_text {
+        font: 700 11px/16px "Roboto", sans-serif;
+        letter-spacing: 0;
+        text-align: center;
+        color: @dark-grey;
+        &-overdue {
+          color: @urgent;
+        }
+      }
+
+      &_trash,
+      &_remove {
+        font-size: 40px;
+        color: @white;
+      }
+
+      &_work {
+        background: @work;
+
+        &-active {
+          background: @work-active;
+        }
+      }
+
+      &_education {
+        background: @education;
+
+        &-active {
+          background: @education-active;
+        }
+      }
+
+      &_hobby {
+        background: @hobby;
+
+        &-active {
+          background: @hobby-active;
+        }
+      }
+
+      &_sport {
+        background: @sport;
+
+        &-active {
+          background: @sport-active;
+        }
+      }
+
+      &_other {
+        background: @other;
+
+        &-active {
+          background: @other-active;
+        }
+      }
+    }
+
+    &-center {
+      display: flex;
+      justify-content: space-between;
+      background: @white;
+      width: 100%;
+
+      &-left {
+        padding-left: 5px;
+
+        &-top {
+          font: 500 18px/24px "Roboto", sans-serif;
+          letter-spacing: 0;
+          margin: 3px 0 4px;
+
+          &_urgent {
+            color: @urgent;
+
+            &:hover {
+              color: @urgent-active;
+            }
+          }
+
+          &_high {
+            color: @high;
+
+            &:hover {
+              color: @high-active;
+            }
+          }
+
+          &_middle {
+            color: @middle;
+
+            &:hover {
+              color: @middle-active;
+            }
+          }
+
+          &_low {
+            color: @low;
+
+            &:hover {
+              color: @low-active;
+            }
+          }
+
+          &_done {
+            text-decoration: line-through;
+          }
+
+          @media (min-width: 600px) {
+            margin: 7px 0 4px 0;
+          }
+          @media (min-width: 686px) {
+            margin: 16px 0 4px 0;
+          }
+        }
+
+        &-bottom {
+          max-width: 396px;
+          font: 400 16px/20px "Roboto", sans-serif;
+          letter-spacing: 0;
+          color: @grey;
+          margin: 0;
+          padding-right: 7px;
+
+          @media (min-width: 700px) {
+            font-size: 14px;
+          }
+        }
+      }
+
+      &-right {
+        display: flex;
+        align-items: center;
+
+        &-edit {
+          padding: 0 0 0 10px;
+        }
+
+        &-trash {
+          padding: 0 10px;
+        }
+
+        &-edit, &-trash, &-arrows-up {
+          font-size: 20px;
+          color: @color-glyphs-task-item;
+          .hover_focus_active_icon_panel-buttons();
+        }
+      }
+    }
+
+    &-right {
+      padding: 20px 0;
+      min-width: 88px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      align-items: center;
+
+      &_urgent {
+        background: @urgent;
+
+        &:hover {
+          background: @urgent-active;
+        }
+      }
+
+      &_high {
+        background: @high;
+
+        &:hover {
+          background: @high-active;
+        }
+      }
+
+      &_middle {
+        background: @middle;
+
+        &:hover {
+          background: @middle-active;
+        }
+      }
+
+      &_low {
+        background: @low;
+
+        &:hover {
+          background: @low-active;
+        }
+      }
+
+      &-tomato {
+        position: relative;
+        font-size: 48px;
+        color: @white;
+
+        &-digit {
+          position: absolute;
+          font-size: 24px;
+          top: calc(50% - 12px);
+          left: calc(50% - 6px);
+        }
+      }
+    }
+  }
+}
+
+.global-task-list-content {
+  &-category {
+    margin: 0 0 56px 0;
+    padding: 0;
+    position: relative;
+    list-style-type: none;
+    @media @breakpoint-mobile {
+      margin: 0 0 48px 0;
+    }
+
+    &_work {
+      box-shadow: 8px 0 @work inset;
+    }
+
+    &_education {
+      box-shadow: 8px 0 @education inset;
+    }
+
+    &_hobby {
+      box-shadow: 8px 0 @hobby inset;
+    }
+
+    &_sport {
+      box-shadow: 8px 0 @sport inset;
+    }
+
+    &_other {
+      box-shadow: 8px 0 @other inset;
+    }
+
+    &__title {
+      padding-bottom: 10px;
+      cursor: pointer;
+
+      &_circle {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        position: relative;
+        top: -2px;
+        left: -3px;
+
+        &_work {
+          background: @work;
+
+          &:hover {
+            background: @work-active;
+          }
+        }
+
+        &_education {
+          background: @education;
+
+          &:hover {
+            background: @education-active;
+          }
+        }
+
+        &_hobby {
+          background: @hobby;
+
+          &:hover {
+            background: @hobby-active;
+          }
+        }
+
+        &_sport {
+          background: @sport;
+
+          &:hover {
+            background: @sport-active;
+          }
+        }
+
+        &_other {
+          background: @other;
+
+          &:hover {
+            background: @other-active;
+          }
+        }
+
+        &:before {
+          top: 5px;
+          left: 5px;
+          position: absolute;
+          content: "";
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          border: 1px solid black;
+        }
+      }
+
+      &_text {
+        font: 700 16px/20px "Roboto", sans-serif;
+        letter-spacing: 0;
+        padding-left: 10px;
+
+        &_work {
+          color: @work;
+
+          &:hover {
+            color: @work-active;
+          }
+        }
+
+        &_education {
+          color: @education;
+
+          &:hover {
+            color: @education-active;
+          }
+        }
+
+        &_hobby {
+          color: @hobby;
+
+          &:hover {
+            color: @hobby-active;
+          }
+        }
+
+        &_sport {
+          color: @sport;
+
+          &:hover {
+            color: @sport-active;
+          }
+        }
+
+        &_other {
+          color: @other;
+
+          &:hover {
+            color: @other-active;
+          }
+        }
+      }
+    }
+  }
+}

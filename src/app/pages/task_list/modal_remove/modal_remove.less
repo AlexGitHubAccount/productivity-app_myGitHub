@@ -1,0 +1,38 @@
+/* helpers */
+@import (reference) "../../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../../assets/less/helpers/_mixins.less";
+
+/* base styles */
+@import "../../../../assets/less/base/_typography.less";
+
+//Remove task
+.text-message {
+  font: 300 36px/48px "Roboto", sans-serif;
+  margin-top: 0;
+  letter-spacing: 0;
+  text-align: center;
+  color: @nepal;
+
+  @media @breakpoint-mobile {
+    font: 300 30px/42px "Roboto", sans-serif;
+  }
+}
+
+.remove-task-buttons {
+  display: flex;
+  justify-content: space-between;
+  @media @breakpoint-mobile {
+    justify-content: center;
+  }
+
+  &__cancel {
+    .styles_for_buttons(100%, 115px, 32px, 0, 4%);
+    .state_for_blue_button();
+    margin-right: 4%;
+  }
+
+  &__remove {
+    .styles_for_buttons(100%, 125px, 32px, 0, 0);
+    .state_for_red_button();
+  }
+}

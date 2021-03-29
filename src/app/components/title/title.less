@@ -1,0 +1,66 @@
+/* helpers */
+@import (reference) "../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../assets/less/helpers/_mixins.less";
+//
+///* base styles */
+@import "../../../assets/less/base/_typography.less";
+//settings page
+.settings-heading-h1 {
+  font: 500 32px/36px "Roboto", sans-serif;
+  letter-spacing: 0.7px;
+  color: @white;
+
+  @media @breakpoint-mobile {
+    font: 500 28px/32px "Roboto", sans-serif;
+    text-align: center;
+    letter-spacing: 0.7px;
+  }
+}
+//task-list page
+.task-list-heading-h1 {
+  font: 500 32px/36px "Roboto", sans-serif;
+  letter-spacing: 0.7px;
+  color: @white;
+
+  @media @breakpoint-mobile {
+    font: 500 28px/32px "Roboto", sans-serif;
+    letter-spacing: 0.7px;
+    justify-content: center;
+  }
+  display: flex;
+
+  &__icon-add {
+    font-size: 16px;
+    color: @white;
+    margin: 11px 0 0 11px;
+
+    @media @breakpoint-mobile {
+      margin: 7px 0 0 11px;
+    }
+  }
+}
+//timer page
+.timer-heading-h1 {
+  font: 500 32px/36px "Roboto", sans-serif;
+  letter-spacing: 0.7px;
+  color: @white;
+  text-align: center;
+
+  @media @breakpoint-mobile {
+    font: 500 28px/32px "Roboto", sans-serif;
+    text-align: center;
+    letter-spacing: 0.7px;
+  }
+}
+//reports page
+.reports-heading-h1 {
+  font: 500 32px/36px "Roboto", sans-serif;
+  letter-spacing: 0.7px;
+  color: @white;
+
+  @media @breakpoint-mobile {
+    font: 500 28px/32px "Roboto", sans-serif;
+    text-align: center;
+    letter-spacing: 0.7px;
+  }
+}

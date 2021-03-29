@@ -1,0 +1,56 @@
+<!--    Modal Add task-->
+    <div class="page__modal-wrapper-{{modal.partOfClass}}-task">
+    <div class="page__modal-{{modal.partOfClass}}-task">
+    <div class="container">
+        <div class="task-list-modal-general-wrapper">
+<div class="close-check-buttons task-list-modal-general-wrapper__close-check-buttons">
+    <span class="close-check-buttons__close-button icon-close"></span>
+    <span class="close-check-buttons__check-button icon-check"></span>
+</div>
+            <h1 class="{{modal.partOfClass}}-task-title task-list-modal-general-wrapper__{{modal.partOfClass}}-task-title">{{modal.title}} task</h1>
+            <form class="form task-list-modal-general-wrapper__form" action="#" >
+                <div class="form__item">
+                    <label class="form__item-label" for="{{modal.partOfClass}}-task-form-title" >TITLE</label><br>
+                    <input class="form__item-input" id="{{modal.partOfClass}}-task-form-title" type="text" placeholder="{{modal.title}} title here">
+                </div>
+                <div class="form__item">
+                    <label class="form__item-label" for="{{modal.partOfClass}}-task-form-description" >DESCRIPTION</label><br>
+                    <input class="form__item-input" id="{{modal.partOfClass}}-task-form-description" type="text" placeholder="{{modal.title}} description here">
+                </div>
+                <div class="form__item">
+                    <label class="form__item-label">CATEGORY</label><br>
+                    <label class="form__item-label form__item-label_extra_css">
+                        <input class="form__item-radio" type="radio" name="category" checked>
+                        <span class="form__item-span form__item-span_yellow"></span><span>Work</span>
+                    </label>
+                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="category"><span class="form__item-span form__item-span_malibu"></span><span>Education</span></label>
+                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="category"><span class="form__item-span form__item-span_amethyst"></span><span>Hobby</span></label>
+                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="category"><span class="form__item-span form__item-span_terra-cotta"></span><span>Sport</span></label>
+                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="category"><span class="form__item-span form__item-span_dark-turquoise"></span><span>Other</span></label>
+                </div>
+                <div class="form__item">
+                    <label class="form__item-label" for="{{modal.partOfClass}}-task-form-deadline" >DEADLINE</label><br>
+                    <input class="form__item-input" id="{{modal.partOfClass}}-task-form-deadline" type="text" placeholder="May 23, 2021">
+                </div>
+                <div class="form__item">
+                    <label class="form__item-label">ESTIMATION</label><br>
+                    <div class="form__item-estimation">
+                        <img class="form__item-estimation-empty-tomato" src="/images/empty-tomato.svg" alt="tomato">
+                        <img class="form__item-estimation-empty-tomato" src="/images/empty-tomato.svg" alt="tomato">
+                        <img class="form__item-estimation-empty-tomato" src="/images/empty-tomato.svg" alt="tomato">
+                        <img class="form__item-estimation-empty-tomato" src="/images/empty-tomato.svg" alt="tomato">
+                        <img class="form__item-estimation-empty-tomato" src="/images/empty-tomato.svg" alt="tomato">
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label class="form__item-label">PRIORITY</label><br>
+                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="priority" checked><span class="form__item-span form__item-span_tomato"></span><span>Urgent</span></label>
+                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="priority"><span class="form__item-span form__item-span_yellow-orange"></span><span>High</span></label>
+                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="priority"><span class="form__item-span form__item-span_gorse"></span><span>Middle</span></label>
+                    <label class="form__item-label form__item-label_extra_css"><input class="form__item-radio" type="radio" name="priority"><span class="form__item-span form__item-span_mountain-meadow"></span><span>Low</span></label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

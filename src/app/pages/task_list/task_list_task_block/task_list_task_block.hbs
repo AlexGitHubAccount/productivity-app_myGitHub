@@ -1,0 +1,34 @@
+
+<li class="tasks-list__item {{block.title}} {{block.titleDone}}">
+    <div class="tasks-list__item-left {{block.titleLeftClassName}}">
+        <span class="tasks-list__item-left_text {{block.textLeftClassName}}">TODAY</span>
+        {{#if block.iconTrashLeft}}
+            <span class="tasks-list__item-left_trash icon-trash"></span>
+        {{/if}}
+        {{#if block.iconCloseLeft}}
+            <span class="tasks-list__item-left_remove icon-close"></span>
+        {{/if}}
+    </div>
+    <div class="tasks-list__item-center">
+        <div class="tasks-list__item-center-left">
+            <p class="tasks-list__item-center-left-top {{block.pCenterColorClassName}} {{block.pCenterTextCrossOutClassName}}">Lorem ipsum sit amet</p>
+            <p class="tasks-list__item-center-left-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+        </div>
+        <div class="tasks-list__item-center-right">
+            {{#if block.iconArrowUpCenter}}
+                <div class="tasks-list__item-center-right-arrows-up icon-arrows-up"></div>
+            {{/if}}
+            {{#if block.iconEditCenter}}
+            <div class="tasks-list__item-center-right-edit icon-edit"></div>
+            {{/if}}
+            {{#if block.iconTrashCenter}}
+            <div class="tasks-list__item-center-right-trash icon-trash"></div>
+            {{/if}}
+        </div>
+    </div>
+    <div class="tasks-list__item-right {{block.titleRightClassName}}">
+        <div class="tasks-list__item-right-tomato icon-tomato">
+            <div class="tasks-list__item-right-tomato-digit">3</div>
+        </div>
+    </div>
+</li>

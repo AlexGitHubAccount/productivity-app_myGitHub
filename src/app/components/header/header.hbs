@@ -1,0 +1,33 @@
+<header class="header static-header settings-general-flex-wrapper__header">
+    <div class="header-sticky__logo"></div>
+    <nav class="header__navigation">
+        <ul class="header__navigation-list">
+            {{#if header.trashItem}}
+            <li class="header__navigation-list-trash">
+                <a class="header__navigation-list-link icon-trash {{header.activeStateOne}}" href="#">
+                {{#if header.trashItemCounter}}
+                    <span class="header__navigation-list-link-counter">2</span>
+                {{/if}}
+                    <span class="tooltip-text">Go to Remove Tasks</span>
+                </a>
+            </li>
+            {{/if}}
+            <li class="header__navigation-list-list">
+                <a class="header__navigation-list-link icon-list {{header.activeStateTwo}}" href="http://localhost:3000/task_list">
+                    <span class="tooltip-text">Go to Task Lists</span>
+                </a>
+            </li>
+            <li class="header__navigation-list-statistics">
+                <a class="header__navigation-list-link icon-statistics {{header.activeStateThree}}" href="http://localhost:3000/reports">
+                    <span class="tooltip-text">Go to Reports</span>
+                </a>
+            </li>
+            <li class="header__navigation-list-settings">
+                <a class="header__navigation-list-link icon-settings {{header.activeStateFour}}" href="http://localhost:3000/settings">
+                    <span class="tooltip-text">Go to Settings</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<!--active-state-for-elements-white-->

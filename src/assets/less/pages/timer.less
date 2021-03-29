@@ -1,0 +1,215 @@
+//General css rules for page settings
+//.timer-general-flex-wrapper {
+//  display: flex;
+//  flex-direction: column;
+//
+//  &__header {
+//    margin-top: 48px;
+//
+//    @media @breakpoint-mobile {
+//      margin-top: 46px;
+//    }
+//  }
+//
+//  &__timer-heading-h1 {
+//    margin-top: 88px;
+//
+//    @media @breakpoint-mobile {
+//      margin: 18px 0 20px;
+//    }
+//
+//    &_without_header {
+//      margin-top: 156px;
+//      @media @breakpoint-mobile {
+//        margin: 25px 0 20px;
+//      }
+//    }
+//  }
+//
+//  &__timer-heading-h2 {
+//    margin: 20px 0 32px 0;
+//    @media @breakpoint-mobile {
+//      margin: 0 0 32px 0;
+//    }
+//  }
+//
+//  &__tomato-iteration {
+//    margin-bottom: 67px;
+//
+//    @media @breakpoint-mobile {
+//      margin-bottom: 35px;
+//    }
+//  }
+//
+//  &__timer-tracker {
+//    margin-bottom: 265px;
+//
+//    @media @breakpoint-mobile {
+//      margin-bottom: 85px;
+//      &_without_button {
+//        margin-bottom: 385px;
+//
+//        @media @breakpoint-mobile {
+//          margin-bottom: 240px;
+//        }
+//
+//        @media @breakpoint-desktop {
+//          margin-bottom: 281px;
+//        }
+//      }
+//    }
+//  }
+//
+//  &__timer-button-start {
+//    margin-bottom: 48px;
+//
+//    @media @breakpoint-mobile {
+//      margin: 0 auto 116px;
+//    }
+//
+//    @media @breakpoint-desktop {
+//      margin: 0 auto 142px;
+//    }
+//  }
+//
+//  &__timer-buttons {
+//    margin-bottom: 48px;
+//
+//    @media @breakpoint-mobile {
+//      margin-bottom: 116px;
+//    }
+//
+//    @media (min-width: 1140px) {
+//      margin-bottom: 154px;
+//    }
+//  }
+//}
+
+//General components for whole page
+//.timer-heading-h1 {
+//  font: 500 32px/36px "Roboto", sans-serif;
+//  letter-spacing: 0.7px;
+//  color: @white;
+//  text-align: center;
+//
+//  @media @breakpoint-mobile {
+//    font: 500 28px/32px "Roboto", sans-serif;
+//    text-align: center;
+//    letter-spacing: 0.7px;
+//  }
+//}
+
+//.timer-heading-h2 {
+//  font: 400 20px/24px "Roboto", sans-serif;
+//  letter-spacing: 0.45px;
+//  text-align: center;
+//  color: @white;
+//
+//  @media @breakpoint-mobile {
+//    font-size: 18px;
+//  }
+//}
+
+//.tomato-iteration {
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//
+//  &__item {
+//    width: 24px;
+//    height: 24px;
+//    margin-right: 16px;
+//    cursor: pointer;
+//  }
+//
+//  &_img_plus {
+//    color: @nepal;
+//    padding-top: 7px;
+//    font-size: 12px;
+//  }
+//}
+
+//.timer-tracker {
+//  display: flex;
+//  justify-content: space-between;
+//
+//  &__arrow-left,
+//  &__arrow-right {
+//    font-size: 50px;
+//    color: @nepal;
+//    align-self: center;
+//    cursor: pointer;
+//    .hover_focus_active(@spray);
+//
+//    &_hidden {
+//      color: @general-background;
+//    }
+//  }
+//
+//  &__main-tracker {
+//    width: 254px;
+//    height: 254px;
+//    background: url("../../images/timer-lets-do-it.png") center no-repeat;
+//  }
+//}
+
+//.timer-button-start {
+//  &_size_s {
+//    .styles_for_buttons(100%, 102px, 31px, auto, auto);
+//    .state_for_green_button();
+//  }
+//
+//  &_size_l {
+//    .styles_for_buttons(100%, 100%, 0, auto, auto);
+//    .state_for_green_button();
+//    @media @breakpoint-mobile {
+//      .styles_for_buttons(100%, 185px, 30px, auto, auto);
+//    }
+//  }
+//}
+//
+////Timer (3,4,5 page)
+//.timer-buttons {
+//  display: flex;
+//  justify-content: space-between;
+//
+//  @media @breakpoint-mobile {
+//    justify-content: center;
+//  }
+//
+//  &__fail-pomodora {
+//    .styles_for_buttons(48.5%, 151px, 32px, 0, 4%);
+//    .state_for_red_button();
+//
+//    @media @breakpoint-mobile {
+//      .styles_for_buttons(100%, 175px, 29px, 0, 2%);
+//    }
+//  }
+//
+//  &__finish-pomodora {
+//    .styles_for_buttons(48.5%, 151px, 32px, 0, 0);
+//    .state_for_green_button();
+//
+//    @media @breakpoint-mobile {
+//      .styles_for_buttons(100%, 193px, 29px, 0, 2%);
+//    }
+//  }
+//
+//  &__start-pomodora {
+//    .styles_for_buttons(48.5%, 151px, 32px, 0, 4%);
+//    .state_for_green_button();
+//
+//    @media @breakpoint-mobile {
+//      .styles_for_buttons(100%, 185px, 25px, 0, 2%);
+//    }
+//  }
+//
+//  &__finish-task {
+//    .styles_for_buttons(48.5%, 151px, 32px, 0, 0);
+//    .state_for_blue_button();
+//
+//    @media @breakpoint-mobile {
+//      .styles_for_buttons(100%, 148px, 25px, 0, 2%);
+//    }
+//  }
+//}

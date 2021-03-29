@@ -1,0 +1,18 @@
+<ul class="settings-time-iteration settings-general-flex-wrapper__settings-time-iteration">
+    {{#each items}}
+<li class="{{this}}">
+    <span class="{{lookup ../title_className @index}}">{{lookup ../title_title_text @index}}</span>
+    <span class="settings-time-iteration__input-wrapper">
+                        <span class="settings-time-iteration__input-icon-minus icon-minus icon-minus-for-js"></span>
+                        <span class="settings-time-iteration__input"></span>
+                        <span class="settings-time-iteration__input-icon-add icon-add icon-plus-for-js"></span>
+                    </span>
+    <p class="settings-time-iteration__text-select-range">{{lookup ../range @index}}
+        <span class="settings-time-iteration__text-select-range-inner">{{lookup ../range_text @index}}</span>
+    </p>
+</li>
+        {{/each}}
+</ul>
+
+
+

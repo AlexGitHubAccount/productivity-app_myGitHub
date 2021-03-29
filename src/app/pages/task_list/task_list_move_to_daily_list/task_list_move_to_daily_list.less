@@ -1,0 +1,30 @@
+/* helpers */
+@import (reference) "../../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../../assets/less/helpers/_mixins.less";
+
+/* base styles */
+@import "../../../../assets/less/base/_typography.less";
+
+//Block Task added
+.move-tasks-to-daily-task-list {
+  text-align: center;
+
+  &__text {
+    font: 300 30px/42px "Roboto", sans-serif;
+    letter-spacing: 0;
+    color: @nepal;
+    margin: 64px 0 24px 0;
+    @media @breakpoint-mobile {
+      margin: 70px 0 36px 0;
+    }
+  }
+
+  &__icon-arrow-circle {
+    font-size: 56px;
+    color: @nepal;
+    margin: 0 0 108px 0;
+    @media @breakpoint-mobile {
+      margin: 0 0 40px 0;
+    }
+  }
+}
