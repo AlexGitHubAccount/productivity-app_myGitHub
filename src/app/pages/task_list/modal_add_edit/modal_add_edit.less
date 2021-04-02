@@ -1,0 +1,293 @@
+/* helpers */
+@import (reference) "../../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../../assets/less/helpers/_mixins.less";
+
+/* base styles */
+@import "../../../../assets/less/base/_typography.less";
+
+.page {
+  &__modal-wrapper-add-task,
+  &__modal-wrapper-edit-task,
+  &__modal-wrapper-remove-task {
+    @media @breakpoint-mobile {
+      background: rgba(0,0,0,0.7);
+      mix-blend-mode: normal;
+      height: 100%;
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__modal-add-task,
+  &__modal-edit-task,
+  &__modal-remove-task {
+    @media @breakpoint-mobile {
+      width: 520px;
+      height: 639px;
+      background: @madison;
+      position: fixed;
+      top: calc(50% - 319.5px);
+      left: calc(50% - 260px);
+    }
+  }
+}
+
+.task-list-modal-general-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &__close-check-buttons {
+    margin: 24px 0 74px 0;
+
+    @media @breakpoint-mobile {
+      margin: 20px 20px 0 0;
+    }
+  }
+
+  &__add-task-title,
+  &__edit-task-title {
+    margin-bottom: 24px;
+  }
+
+  &__remove-task-title {
+    margin-bottom: 316px;
+
+    @media @breakpoint-mobile {
+      margin-bottom: 154px;
+    }
+  }
+
+  &__text-message {
+
+    margin-bottom: 344px;
+    @media @breakpoint-mobile {
+      margin-bottom: 199px;
+    }
+  }
+
+  &__remove-task-buttons {
+    margin-bottom: 48px;
+  }
+}
+
+//Styles for modals
+.close-check-buttons {
+  display: flex;
+  justify-content: flex-end;
+
+  &__close-button {
+    color: #8DA5B8;
+    font-size: 32px;
+    cursor: pointer;
+
+    &:hover {
+      color: @spray;
+    }
+
+    @media @breakpoint-mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__check-button {
+    font-size: 32px;
+    margin-left: 32px;
+    color: @nepal;
+    cursor: pointer;
+
+    &:hover {
+      color: @spray;
+    }
+
+    @media @breakpoint-mobile {
+      font-size: 20px;
+    }
+  }
+}
+
+.add-task-title,
+.edit-task-title,
+.remove-task-title {
+  font: 700 28px/28px "Roboto", sans-serif;
+  color: @white;
+  text-align: center;
+  letter-spacing: 0.7px;
+}
+
+.form {
+  margin: 0 9.5% 174px;
+
+  &__item {
+    max-width: 576px;
+    padding-top: 33px;
+    border-bottom: 1px solid #425869;
+
+    @media @breakpoint-mobile {
+      padding-top: 25px;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &-label {
+      font: 400 16px/20px "Roboto", sans-serif;
+      letter-spacing: 0;
+      color: @white;
+
+      @media @breakpoint-mobile {
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      &_extra_css {
+        display: inline-block;
+        color: @nepal;
+
+        @media @min-width-screen {
+          margin: 17px 2px 17px 0;
+        }
+
+        @media (min-width: 540px) {
+          margin: 17px 4px 17px 0;
+        }
+
+        @media (min-width: 580px) {
+          margin: 17px 10px 17px 0;
+        }
+
+        @media (min-width: 726px) {
+          margin: 17px 32px 17px 0;
+        }
+
+        @media @breakpoint-mobile {
+          margin: 10px 2px 10.4px 0;
+          font-size: 16px;
+          line-height: 20px;
+        }
+
+        &:hover {
+          color: @spray;
+          cursor: pointer;
+        }
+      }
+
+      & input:checked + span::before {
+        content: '';
+        position: absolute;
+        left: 4.8px;
+        top: 4.8px;
+        border: 2px solid black;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+      }
+
+      & input:checked ~ span {
+        color: @white;
+      }
+    }
+
+    &-input {
+      display: block;
+      width: 100%;
+      padding: 17px 0;
+      background: @general-background;
+      border: 0 inset;
+      outline: none;
+
+      @media @breakpoint-mobile {
+        padding: 10.8px 0;
+      }
+
+      &::placeholder {
+        font: 400 20px/24px "Roboto", sans-serif;
+        letter-spacing: 0;
+      }
+
+      &[placeholder] {
+        color: @white;
+      }
+    }
+
+    &-estimation {
+      padding: 14.5px 0;
+      cursor: pointer;
+
+      &-full-tomato {
+        width: 20px;
+        height: 19px;
+        margin-right: 12px;
+
+        @media @breakpoint-mobile {
+          margin-right: 8px;
+        }
+      }
+
+      &-empty-tomato {
+        width: 20px;
+        height: 19px;
+        margin-right: 12px;
+
+        @media @breakpoint-mobile {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    &-radio {
+      display: none;
+    }
+
+    &-span {
+      position: relative;
+      top: 2px;
+      left: -2px;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: #F5F5F5;
+      border-radius: 50%;
+
+      &_yellow {
+        background: @work;
+      }
+
+      &_malibu {
+        background: @education;
+      }
+
+      &_amethyst {
+        background: @hobby;
+      }
+
+      &_terra-cotta {
+        background: @sport;
+      }
+
+      &_dark-turquoise {
+        background: @other;
+      }
+
+      &_tomato {
+        background: @urgent;
+      }
+
+      &_yellow-orange {
+        background: @high;
+      }
+
+      &_gorse {
+        background: @middle;
+      }
+
+      &_mountain-meadow {
+        background: @low;
+      }
+    }
+  }
+}
+

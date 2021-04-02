@@ -1,0 +1,88 @@
+/* helpers */
+@import (reference) "../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../assets/less/helpers/_mixins.less";
+
+/* base styles */
+@import "../../../assets/less/base/_typography.less";
+
+.settings-general-flex-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    margin-top: 48px;
+
+    @media @breakpoint-mobile {
+      margin-top: 46px;
+    }
+  }
+
+  &__settings-heading-h1 {
+    margin-top: -30px;
+
+    @media @breakpoint-mobile {
+      margin-top: 18px;
+    }
+  }
+
+  &__settings-tabs {
+    margin-top: 46px;
+
+    @media @breakpoint-mobile {
+      margin-top: 26px;
+    }
+
+    @media @breakpoint-desktop {
+      margin-top: 32px;
+    }
+  }
+
+  &__settings-heading-h2 {
+    margin-top: 44px;
+
+    @media @breakpoint-mobile {
+      margin-top: -23px;
+    }
+  }
+
+  &__categories-list {
+    margin: 64px 3% 271px;
+
+    @media @breakpoint-mobile {
+      margin: 96px auto 80px;
+    }
+  }
+
+  &__settings-button-go-to-tasks {
+    margin-bottom: 48px;
+
+    @media @breakpoint-mobile {
+      margin: 0 auto 135px;
+    }
+
+    @media @breakpoint-desktop {
+      margin: 0 auto 151px;
+    }
+
+  }
+
+  &__settings-time-iteration {
+    margin: 64px auto;
+
+    @media @breakpoint-mobile {
+      margin: 96px auto 24px;
+    }
+  }
+
+  &__your-cycle {
+    margin-bottom: 70px;
+
+    @media @breakpoint-mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__pomodoros-buttons {
+    margin-bottom: 48px;
+  }
+}

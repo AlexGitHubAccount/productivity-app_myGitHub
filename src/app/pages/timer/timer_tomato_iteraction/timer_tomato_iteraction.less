@@ -1,0 +1,25 @@
+/* helpers */
+@import (reference) "../../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../../assets/less/helpers/_mixins.less";
+
+/* base styles */
+@import "../../../../assets/less/base/_typography.less";
+
+.tomato-iteration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    cursor: pointer;
+  }
+
+  &_img_plus {
+    color: @nepal;
+    padding-top: 7px;
+    font-size: 12px;
+  }
+}

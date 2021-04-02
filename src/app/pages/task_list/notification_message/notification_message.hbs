@@ -1,0 +1,45 @@
+<!--            Block with all notification messages-->
+    {{#if block.noCategory}}
+    <div class="block-with-notification__item block-with-notification__item_type_no-category">
+                    <div class="block-with-notification__item-left block-with-notification__item-left_type_no-category">
+                        <div class="block-with-notification__item-left-icon icon-tomato-info"></div>
+                    </div>
+                    <div class="block-with-notification__item-right">
+                        <div class="block-with-notification__item-right-text">This is just an info notification message!</div>
+                        <div class="block-with-notification__item-right-icon icon-close"></div>
+                    </div>
+                </div>
+    {{/if}}
+    {{#if block.urgent}}
+    <div class="block-with-notification__item block-with-notification__item_type_urgent">
+                    <div class="block-with-notification__item-left block-with-notification__item-left_type_urgent">
+                        <div class="block-with-notification__item-left-icon icon-tomato-error"></div>
+                    </div>
+                    <div class="block-with-notification__item-right">
+                        <div class="block-with-notification__item-right-text">Oops! An error has occured.</div>
+                        <div class="block-with-notification__item-right-icon icon-close"></div>
+                    </div>
+                </div>
+    {{/if}}
+    {{#if block.high}}
+    <div class="block-with-notification__item block-with-notification__item_type_high">
+                    <div class="block-with-notification__item-left block-with-notification__item-left_type_high">
+                        <div class="block-with-notification__item-left-icon icon-tomato-info"></div>
+                    </div>
+                    <div class="block-with-notification__item-right">
+                        <div class="block-with-notification__item-right-text">This is just a warning message!</div>
+                        <div class="block-with-notification__item-right-icon icon-close"></div>
+                    </div>
+                </div>
+    {{/if}}
+    {{#if block.low}}
+    <div class="block-with-notification__item block-with-notification__item_type_low">
+                    <div class="block-with-notification__item-left block-with-notification__item-left_type_low">
+                        <div class="block-with-notification__item-left-icon icon-tomato-success"></div>
+                    </div>
+                    <div class="block-with-notification__item-right">
+                        <div class="block-with-notification__item-right-text">Task was successfully created.</div>
+                        <div class="block-with-notification__item-right-icon icon-close"></div>
+                    </div>
+                </div>
+    {{/if}}

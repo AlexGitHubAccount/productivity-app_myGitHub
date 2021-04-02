@@ -1,0 +1,102 @@
+/* helpers */
+@import (reference) "../../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../../assets/less/helpers/_mixins.less";
+
+/* base styles */
+@import "../../../../assets/less/base/_typography.less";
+
+.block-with-notification {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  &__item {
+    width: 100%;
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+    border: 1px solid @white;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &_type_no-category {
+      background: @education-active;
+    }
+
+    &_type_urgent {
+      background: @urgent-active;
+    }
+
+    &_type_high {
+      background: @high-active;
+    }
+
+    &_type_low {
+      background: @low-active;
+    }
+
+    @media @breakpoint-mobile {
+      max-width: 456px;
+    }
+    @media @breakpoint-desktop {
+      max-width: 496px;
+    }
+
+    &-left {
+      &_type_no-category {
+        background: @education;
+      }
+
+      &_type_urgent {
+        background: @urgent;
+      }
+
+      &_type_high {
+        background: @high;
+      }
+
+      &_type_low {
+        background: @low;
+      }
+
+      &-icon {
+        font-size: 48px;
+        padding: 12px 20px;
+        color: @white;
+        @media @breakpoint-mobile {
+          font-size: 32px;
+        }
+      }
+    }
+
+    &-right {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 0 20px;
+
+      &-text {
+        font: 700 22px/24px "Roboto", sans-serif;
+        letter-spacing: 0;
+        color: @white;
+        @media @breakpoint-mobile {
+          font-size: 15px;
+          line-height: 16px;
+          padding: 0 16px;
+        }
+      }
+
+      &-icon {
+        font-size: 32px;
+        color: @white;
+        @media @breakpoint-mobile {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

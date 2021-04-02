@@ -1,0 +1,227 @@
+/* helpers */
+@import (reference) "../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../assets/less/helpers/_mixins.less";
+
+/* base styles */
+@import "../../../assets/less/base/_typography.less";
+
+//box-sizing:border-box for all elements
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+//General rules for all pages
+html {
+  background: @general-background;
+  font-size: @general-font;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+.page {
+  min-width: 520px;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  @media @min-width-screen {
+    max-width: 720px;
+    margin: 0 3.0%;
+  }
+  @media @breakpoint-mobile {
+    max-width: 936px;
+    margin: 0 3.1%;
+  }
+  @media @breakpoint-tablet {
+    max-width: 936px;
+    margin: 0 auto;
+  }
+  @media @breakpoint-desktop {
+    max-width: 1224px;
+    margin: 0 auto;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  &-sticky{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 28px 0;
+    min-height: 130px;
+    background: @general-background;
+    z-index: 1;
+    -webkit-box-shadow: 0 3px 4px 5px @bg-color-header-bottom-shadow;
+    -moz-box-shadow:    0 3px 4px 5px @bg-color-header-bottom-shadow;
+    box-shadow:         0 3px 4px 5px @bg-color-header-bottom-shadow;
+
+    &__container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &-sticky__logo {
+    &-svg {
+      width: 242px;
+      height: 74px;
+    }
+  }
+
+  &__navigation-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    &-link {
+      display: block;
+      text-decoration: none;
+      color: @nepal;
+      cursor: pointer;
+      .hover_focus_active(@spray);
+      position: relative;
+
+      &-counter {
+        position: absolute;
+        top: 13px;
+        left: 10px;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0;
+        color: @white;
+        background: @urgent;
+        text-align: center;
+      }
+    }
+
+    &-list,
+    &-trash,
+    &-add {
+      margin: 0 0 0 20px;
+      font-size: 23px;
+      @media @breakpoint-mobile {
+        margin: 0 0 0 33.3px;
+        font-size: 19px;
+      }
+    }
+
+    &-statistics {
+      margin-left: 20px;
+      font-size: 20px;
+      @media @breakpoint-mobile {
+        margin-left: 33.3px;
+        font-size: 17px;
+      }
+    }
+
+    &-settings {
+      margin-left: 20px;
+      font-size: 24px;
+      @media @breakpoint-mobile {
+        font-size: 20px;
+        margin-left: 33.3px;
+        &:before {
+          color: @white;
+        }
+      }
+    }
+  }
+}
+
+/////Active state for all icons
+.active-state-for-elements-white {
+  color: @white !important;
+}
+
+///////Styles for tooltips
+.icon-edit,
+.icon-arrow-left,
+.icon-arrow-right,
+.icon-add,
+.icon-trash,
+.icon-list,
+.icon-statistics,
+.icon-settings {
+  position: relative;
+
+  &:hover {
+    & .tooltip-text {
+      visibility: visible;
+    }
+  }
+}
+
+.tooltip-text {
+  position: absolute;
+  left: -2px;
+  bottom: -36px;
+  visibility: hidden;
+  background-color: @bg-tooltip;
+  width: 125px;
+  padding: 4px;
+  border-radius: 2px;
+  z-index: 2;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  color: @color-tooltip;
+  text-align: center;
+
+  &:after {
+    content: " ";
+    width: 0;
+    position: absolute;
+    bottom: 100%;
+    left: 10%;
+    margin-left: -5px;
+    border-bottom: 5px solid @border-color-tooltip;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    font-size: 0;
+    line-height: 0;
+  }
+}
+
+////////////////////
+//Page settings block your cycle
+.hide-block{
+  display: none;
+}
+.show-block{
+  display: block;
+}
+.show-flex-block{
+  display: flex;
+}
+//Page settings block your cycle
+.disabled-buttons:hover{
+  color: @nepal !important;
+}
+

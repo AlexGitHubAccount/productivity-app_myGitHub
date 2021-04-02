@@ -1,0 +1,55 @@
+/* helpers */
+@import (reference) "../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../assets/less/helpers/_mixins.less";
+
+/* base styles */
+@import "../../../assets/less/base/_typography.less";
+//Task list
+//General css rules for page task list
+.task-list-general-flex-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    margin-top: 48px;
+    @media @breakpoint-mobile {
+      margin-top: 46px;
+    }
+
+    &-sticky {
+      margin-top: 0;
+    }
+  }
+
+  &__task-list-heading-h1 {
+    margin-top: -30px;
+    @media @breakpoint-mobile {
+      margin-top: 18px;
+    }
+  }
+
+  &__daily-task-list-tabs {
+    margin-top: 46px;
+    @media @breakpoint-mobile {
+      margin-top: 26px;
+    }
+    @media @breakpoint-desktop {
+      margin-top: 32px;
+    }
+  }
+
+  &__daily-tasks-list {
+    margin: 24px 0 52px;
+    @media @breakpoint-mobile {
+      margin: 16px 0 20px;
+    }
+  }
+
+  &__global-task-list-title-tabs {
+    margin-bottom: 34px;
+    @media @breakpoint-mobile {
+      margin-bottom: 24px;
+    }
+  }
+}

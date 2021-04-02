@@ -1,0 +1,131 @@
+/* helpers */
+@import (reference) "../../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../../assets/less/helpers/_mixins.less";
+
+/* base styles */
+@import "../../../../assets/less/base/_typography.less";
+
+.settings-time-iteration {
+  @media @breakpoint-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  padding: 0;
+
+  &__item {
+    display: list-item;
+    @media @breakpoint-mobile {
+      width: 45%;
+    }
+
+    &_orange {
+      list-style: square outside url("../../../../assets/images/settings/marker-orange.png");
+
+      @media @breakpoint-mobile {
+        text-align: right;
+        list-style: square inside url("../../../../assets/images/settings/marker-orange.png");
+      }
+    }
+
+    &_aqua {
+      list-style: square outside url("../../../../assets/images/settings/marker-aqua.png");
+    }
+
+    &_blue {
+      list-style: square outside url("../../../../assets/images/settings/marker-blue.png");
+
+      @media @breakpoint-mobile {
+        text-align: right;
+        list-style: square inside url("../../../../assets/images/settings/marker-blue.png");
+      }
+    }
+
+    &_purple {
+      list-style: square outside url("../../../../assets/images/settings/marker-purple.png");
+    }
+  }
+
+  &__text {
+    font: 400 16px/16px "PT Sans", sans-serif;
+    padding: 0 52px 0 14px;
+    letter-spacing: 0;
+    color: @white;
+
+    @media @breakpoint-mobile {
+      font: 400 14px/16px "PT Sans", sans-serif;
+      padding-left: 0;
+    }
+
+    &_size_l {
+      padding-right: 22px;
+    }
+    &_size_m {
+      padding-right: 40px;
+    }
+  }
+
+  &__input {
+    display: inline-block;
+    padding-bottom: 8px;
+    width:131px;
+    text-align: center;
+    font: 400 16px/16px "Roboto", sans-serif;
+    letter-spacing: 0;
+    color: @nepal;
+    .hover_focus_active(@spray);
+
+    @media @breakpoint-mobile {
+      width: 71px;
+    }
+    &-wrapper{
+      display: inline-block;
+      max-width: 160px;
+      border-bottom: 1px solid @nepal;
+      margin-right: 65px;
+      @media @breakpoint-mobile {
+        max-width: 100px;
+      }
+    }
+    &-icon-minus {
+      display: inline-block;
+      color: @nepal;
+      font-size: 10px;
+      cursor: pointer;
+      .hover_focus_active(@spray);
+    }
+
+    &-icon-add {
+      display: inline-block;
+      color:@nepal;
+      font-size: 10px;
+      cursor: pointer;
+      .hover_focus_active(@spray);
+    }
+  }
+
+  &__text-select-range {
+    margin: 20px 0 48px 0;
+    padding-left: 14px;
+    font: 400 16px/16px "PT Sans", sans-serif;
+    letter-spacing: 0;
+    color: @nepal;
+
+    @media @breakpoint-mobile {
+      font: 400 14px/16px "PT Sans", sans-serif;
+      padding-left: 0;
+    }
+
+    &_without_padding-bottom {
+      margin-bottom: 0;
+    }
+
+    &-inner {
+      color: @white;
+    }
+  }
+}
+
+
+

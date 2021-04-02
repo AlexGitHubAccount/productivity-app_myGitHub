@@ -1,0 +1,68 @@
+/* helpers */
+@import (reference) "../../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../../assets/less/helpers/_mixins.less";
+
+/* base styles */
+@import "../../../../assets/less/base/_typography.less";
+
+.first-time-visit-page {
+  text-align: center;
+
+  &__icon-svg {
+    width: 212px;
+    height: 198px;
+    margin: 290px 0 64px;
+
+    @media @breakpoint-mobile {
+      width: 171px;
+      height: 160px;
+      margin: 112px 0 56px;
+    }
+
+    &-to-do-done {
+      margin: 208px 0 64px;
+      @media @breakpoint-mobile {
+        margin: 70px 0 56px;
+      }
+    }
+  }
+
+  &__text {
+    font: 300 36px/46px "Roboto", sans-serif;
+    color: @nepal;
+    margin: 0 0 154px;
+
+    @media @breakpoint-mobile {
+      margin: 0 0 56px;
+    }
+
+    &_without-buttons {
+      margin: 0 0 236px;
+
+      @media @breakpoint-mobile {
+        margin: 0 0 226px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 48px;
+
+    @media @breakpoint-mobile {
+      margin: 0 0 144px ;
+      justify-content: center;
+    }
+
+    &-skip {
+      .styles_for_buttons(48.5%, 97px, 20px, 0, 4%);
+      .state_for_blue_button();
+    }
+
+    &-go-to-settings {
+      .styles_for_buttons(48.5%, 173px, 20px, 0, 0);
+      .state_for_green_button();
+    }
+  }
+}

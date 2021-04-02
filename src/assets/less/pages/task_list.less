@@ -1,0 +1,1156 @@
+//General css rules for all page task lists + modal
+//.page {
+//  &__modal-wrapper-add-task,
+//  &__modal-wrapper-edit-task,
+//  &__modal-wrapper-remove-task {
+//    @media @breakpoint-mobile {
+//      background: rgba(0,0,0,0.7);
+//      mix-blend-mode: normal;
+//      height: 100%;
+//      position: fixed;
+//      width: 100%;
+//      z-index: 100;
+//      top: 0;
+//      left: 0;
+//    }
+//  }
+//
+//  &__modal-add-task,
+//  &__modal-edit-task,
+//  &__modal-remove-task {
+//    @media @breakpoint-mobile {
+//      width: 520px;
+//      height: 639px;
+//      background: @madison;
+//      position: fixed;
+//      top: calc(50% - 319.5px);
+//      left: calc(50% - 260px);
+//    }
+//  }
+//}
+//
+//.task-list-modal-general-wrapper {
+//  display: flex;
+//  flex-direction: column;
+//
+//  &__close-check-buttons {
+//    margin: 24px 0 74px 0;
+//
+//    @media @breakpoint-mobile {
+//      margin: 20px 20px 0 0;
+//    }
+//  }
+//
+//  &__add-task-title,
+//  &__edit-task-title {
+//    margin-bottom: 24px;
+//  }
+//
+//  &__remove-task-title {
+//    margin-bottom: 316px;
+//
+//    @media @breakpoint-mobile {
+//      margin-bottom: 154px;
+//    }
+//  }
+//
+//  &__text-message {
+//
+//    margin-bottom: 344px;
+//    @media @breakpoint-mobile {
+//      margin-bottom: 199px;
+//    }
+//  }
+//
+//  &__remove-task-buttons {
+//    margin-bottom: 48px;
+//  }
+//}
+//
+////Styles for modals
+//.close-check-buttons {
+//  display: flex;
+//  justify-content: flex-end;
+//
+//  &__close-button {
+//    color: #8DA5B8;
+//    font-size: 32px;
+//    cursor: pointer;
+//
+//    &:hover {
+//      color: @spray;
+//    }
+//
+//    @media @breakpoint-mobile {
+//      font-size: 20px;
+//    }
+//  }
+//
+//  &__check-button {
+//    font-size: 32px;
+//    margin-left: 32px;
+//    color: @nepal;
+//    cursor: pointer;
+//
+//    &:hover {
+//      color: @spray;
+//    }
+//
+//    @media @breakpoint-mobile {
+//      font-size: 20px;
+//    }
+//  }
+//}
+//
+//.add-task-title,
+//.edit-task-title,
+//.remove-task-title {
+//  font: 700 28px/28px "Roboto", sans-serif;
+//  color: @white;
+//  text-align: center;
+//  letter-spacing: 0.7px;
+//}
+//
+//.form {
+//  margin: 0 9.5% 174px;
+//
+//  &__item {
+//    max-width: 576px;
+//    padding-top: 33px;
+//    border-bottom: 1px solid #425869;
+//
+//    @media @breakpoint-mobile {
+//      padding-top: 25px;
+//    }
+//
+//    &:first-child {
+//      padding-top: 0;
+//    }
+//
+//    &-label {
+//      font: 400 16px/20px "Roboto", sans-serif;
+//      letter-spacing: 0;
+//      color: @white;
+//
+//      @media @breakpoint-mobile {
+//        font-size: 14px;
+//        line-height: 16px;
+//      }
+//
+//      &_extra_css {
+//        display: inline-block;
+//        color: @nepal;
+//
+//        @media @min-width-screen {
+//          margin: 17px 2px 17px 0;
+//        }
+//
+//        @media (min-width: 540px) {
+//          margin: 17px 4px 17px 0;
+//        }
+//
+//        @media (min-width: 580px) {
+//          margin: 17px 10px 17px 0;
+//        }
+//
+//        @media (min-width: 726px) {
+//          margin: 17px 32px 17px 0;
+//        }
+//
+//        @media @breakpoint-mobile {
+//          margin: 10px 2px 10.4px 0;
+//          font-size: 16px;
+//          line-height: 20px;
+//        }
+//
+//        &:hover {
+//          color: @spray;
+//          cursor: pointer;
+//        }
+//      }
+//
+//      & input:checked + span::before {
+//        content: '';
+//        position: absolute;
+//        left: 4.8px;
+//        top: 4.8px;
+//        border: 2px solid black;
+//        width: 7px;
+//        height: 7px;
+//        border-radius: 50%;
+//      }
+//
+//      & input:checked ~ span {
+//        color: @white;
+//      }
+//    }
+//
+//    &-input {
+//      display: block;
+//      width: 100%;
+//      padding: 17px 0;
+//      background: @general-background;
+//      border: 0 inset;
+//      outline: none;
+//
+//      @media @breakpoint-mobile {
+//        padding: 10.8px 0;
+//      }
+//
+//      &::placeholder {
+//        font: 400 20px/24px "Roboto", sans-serif;
+//        letter-spacing: 0;
+//      }
+//
+//      &[placeholder] {
+//        color: @white;
+//      }
+//    }
+//
+//    &-estimation {
+//      padding: 14.5px 0;
+//      cursor: pointer;
+//
+//      &-full-tomato {
+//        width: 20px;
+//        height: 19px;
+//        margin-right: 12px;
+//
+//        @media @breakpoint-mobile {
+//          margin-right: 8px;
+//        }
+//      }
+//
+//      &-empty-tomato {
+//        width: 20px;
+//        height: 19px;
+//        margin-right: 12px;
+//
+//        @media @breakpoint-mobile {
+//          margin-right: 8px;
+//        }
+//      }
+//    }
+//
+//    &-radio {
+//      display: none;
+//    }
+//
+//    &-span {
+//      position: relative;
+//      top: 2px;
+//      left: -2px;
+//      display: inline-block;
+//      width: 16px;
+//      height: 16px;
+//      background: #F5F5F5;
+//      border-radius: 50%;
+//
+//      &_yellow {
+//        background: @work;
+//      }
+//
+//      &_malibu {
+//        background: @education;
+//      }
+//
+//      &_amethyst {
+//        background: @hobby;
+//      }
+//
+//      &_terra-cotta {
+//        background: @sport;
+//      }
+//
+//      &_dark-turquoise {
+//        background: @other;
+//      }
+//
+//      &_tomato {
+//        background: @urgent;
+//      }
+//
+//      &_yellow-orange {
+//        background: @high;
+//      }
+//
+//      &_gorse {
+//        background: @middle;
+//      }
+//
+//      &_mountain-meadow {
+//        background: @low;
+//      }
+//    }
+//  }
+//}
+//
+////Remove task
+//.text-message {
+//  font: 300 36px/48px "Roboto", sans-serif;
+//  margin-top: 0;
+//  letter-spacing: 0;
+//  text-align: center;
+//  color: @nepal;
+//
+//  @media @breakpoint-mobile {
+//    font: 300 30px/42px "Roboto", sans-serif;
+//  }
+//}
+//
+//.remove-task-buttons {
+//  display: flex;
+//  justify-content: space-between;
+//  @media @breakpoint-mobile {
+//    justify-content: center;
+//  }
+//
+//  &__cancel {
+//    .styles_for_buttons(100%, 115px, 32px, 0, 4%);
+//    .state_for_blue_button();
+//    margin-right: 4%;
+//  }
+//
+//  &__remove {
+//    .styles_for_buttons(100%, 125px, 32px, 0, 0);
+//    .state_for_red_button();
+//  }
+//}
+
+////////////////////////////////////////////
+//Task list
+//General css rules for page task list
+//.task-list-general-flex-wrapper {
+//  position: relative;
+//  display: flex;
+//  flex-direction: column;
+//
+//  &__header {
+//    margin-top: 48px;
+//    @media @breakpoint-mobile {
+//      margin-top: 46px;
+//    }
+//
+//    &-sticky {
+//      margin-top: 0;
+//    }
+//  }
+//
+//  &__task-list-heading-h1 {
+//    margin-top: -30px;
+//    @media @breakpoint-mobile {
+//      margin-top: 18px;
+//    }
+//  }
+//
+//  &__daily-task-list-tabs {
+//    margin-top: 46px;
+//    @media @breakpoint-mobile {
+//      margin-top: 26px;
+//    }
+//    @media @breakpoint-desktop {
+//      margin-top: 32px;
+//    }
+//  }
+//
+//  &__daily-tasks-list {
+//    margin: 24px 0 52px;
+//    @media @breakpoint-mobile {
+//      margin: 16px 0 20px;
+//    }
+//  }
+//
+//  &__global-task-list-title-tabs {
+//    margin-bottom: 34px;
+//    @media @breakpoint-mobile {
+//      margin-bottom: 24px;
+//    }
+//  }
+//}
+
+//General components for whole page
+//.task-list-heading-h1 {
+//  font: 500 32px/36px "Roboto", sans-serif;
+//  letter-spacing: 0.7px;
+//  color: @white;
+//
+//  @media @breakpoint-mobile {
+//    font: 500 28px/32px "Roboto", sans-serif;
+//    letter-spacing: 0.7px;
+//    justify-content: center;
+//  }
+//  display: flex;
+//
+//  &__icon-add {
+//    font-size: 16px;
+//    color: @white;
+//    margin: 11px 0 0 11px;
+//
+//    @media @breakpoint-mobile {
+//      margin: 7px 0 0 11px;
+//    }
+//  }
+//}
+
+//For daily tasks lists
+//.daily-task-list-tabs {
+//  display: flex;
+//  justify-content: space-between;
+//
+//  &__left,
+//  &__right {
+//    display: flex;
+//  }
+//
+//  &__left-elem {
+//    background: @general-background;
+//    font: 400 22px/24px "PT Sans", sans-serif;
+//    font-family: "", sans-serif;
+//    letter-spacing: 0;
+//    outline: none;
+//    border: none;
+//    color: @nepal;
+//    .hover_focus_active(@spray);
+//    @media @breakpoint-mobile {
+//      font: 400 16px/16px "PT Sans", sans-serif;
+//      padding: 0 8px 0 0;
+//    }
+//  }
+//
+//  &__separate-line {
+//    width: 1px;
+//    height: 16px;
+//    background: @nepal;
+//    margin: 7px 10px 0;
+//
+//    @media @breakpoint-mobile {
+//      height: 12px;
+//      margin-top: 5px;
+//    }
+//  }
+//
+//  &__right-elem {
+//    background: @general-background;
+//    font: 400 22px/24px "PT Sans", sans-serif;
+//    border: none;
+//    letter-spacing: 0;
+//    outline: none;
+//    padding: 2px 0 0 16px;
+//    color: @nepal;
+//    .hover_focus_active(@spray);
+//
+//    @media @breakpoint-mobile {
+//      font-size: 16px;
+//      font-weight: 400;
+//      line-height: 16px;
+//    }
+//  }
+//}
+
+//UL container for li elements - tasks lists
+//.tasks-list {
+//  padding-left: 0;
+//  list-style-type: none;
+//
+//  &__item {
+//    display: flex;
+//    margin-bottom: 12px;
+//    cursor: pointer;
+//
+//    &_work {
+//      border-left: 8px solid @work;
+//
+//      &-active {
+//        border-left: 8px solid @work-active;
+//      }
+//    }
+//
+//    &_education {
+//      border-left: 8px solid @education;
+//
+//      &-active {
+//        border-left: 8px solid @education-active;
+//      }
+//    }
+//
+//    &_hobby {
+//      border-left: 8px solid @hobby;
+//
+//      &-active {
+//        border-left: 8px solid @hobby-active;
+//      }
+//    }
+//
+//    &_sport {
+//      border-left: 8px solid @sport;
+//
+//      &-active {
+//        border-left: 8px solid @sport-active;
+//      }
+//    }
+//
+//    &_other {
+//      border-left: 8px solid @other;
+//
+//      &-active {
+//        border-left: 8px solid @other-active;
+//      }
+//    }
+//
+//    &_done {
+//      opacity: 0.7;
+//      background: @blur-task-list;
+//      box-shadow: 0 5px 8.3px rgba(34, 56, 73, 0.3);
+//
+//      &-hidden {
+//        display: none !important;
+//      }
+//    }
+//
+//    @media @breakpoint-mobile {
+//    }
+//
+//    &-left {
+//      display: flex;
+//      justify-content: center;
+//      align-items: center;
+//      min-width: 88px;
+//      background: @white;
+//
+//      &_text {
+//        font: 700 11px/16px "Roboto", sans-serif;
+//        letter-spacing: 0;
+//        text-align: center;
+//        color: @dark-grey;
+//        &-overdue {
+//          color: @urgent;
+//        }
+//      }
+//
+//      &_trash,
+//      &_remove {
+//        font-size: 40px;
+//        color: @white;
+//      }
+//
+//      &_work {
+//        background: @work;
+//
+//        &-active {
+//          background: @work-active;
+//        }
+//      }
+//
+//      &_education {
+//        background: @education;
+//
+//        &-active {
+//          background: @education-active;
+//        }
+//      }
+//
+//      &_hobby {
+//        background: @hobby;
+//
+//        &-active {
+//          background: @hobby-active;
+//        }
+//      }
+//
+//      &_sport {
+//        background: @sport;
+//
+//        &-active {
+//          background: @sport-active;
+//        }
+//      }
+//
+//      &_other {
+//        background: @other;
+//
+//        &-active {
+//          background: @other-active;
+//        }
+//      }
+//    }
+//
+//    &-center {
+//      display: flex;
+//      justify-content: space-between;
+//      background: @white;
+//      width: 100%;
+//
+//      &-left {
+//        padding-left: 5px;
+//
+//        &-top {
+//          font: 500 18px/24px "Roboto", sans-serif;
+//          letter-spacing: 0;
+//          margin: 3px 0 4px;
+//
+//          &_urgent {
+//            color: @urgent;
+//
+//            &:hover {
+//              color: @urgent-active;
+//            }
+//          }
+//
+//          &_high {
+//            color: @high;
+//
+//            &:hover {
+//              color: @high-active;
+//            }
+//          }
+//
+//          &_middle {
+//            color: @middle;
+//
+//            &:hover {
+//              color: @middle-active;
+//            }
+//          }
+//
+//          &_low {
+//            color: @low;
+//
+//            &:hover {
+//              color: @low-active;
+//            }
+//          }
+//
+//          &_done {
+//            text-decoration: line-through;
+//          }
+//
+//          @media (min-width: 600px) {
+//            margin: 7px 0 4px 0;
+//          }
+//          @media (min-width: 686px) {
+//            margin: 16px 0 4px 0;
+//          }
+//        }
+//
+//        &-bottom {
+//          max-width: 396px;
+//          font: 400 16px/20px "Roboto", sans-serif;
+//          letter-spacing: 0;
+//          color: @grey;
+//          margin: 0;
+//          padding-right: 7px;
+//
+//          @media (min-width: 700px) {
+//            font-size: 14px;
+//          }
+//        }
+//      }
+//
+//      &-right {
+//        display: flex;
+//        align-items: center;
+//
+//        &-edit {
+//          padding: 0 0 0 10px;
+//        }
+//
+//        &-trash {
+//          padding: 0 10px;
+//        }
+//
+//        &-edit, &-trash, &-arrows-up {
+//          font-size: 20px;
+//          color: @color-glyphs-task-item;
+//          .hover_focus_active_icon_panel-buttons();
+//        }
+//      }
+//    }
+//
+//    &-right {
+//      padding: 20px 0;
+//      min-width: 88px;
+//      text-align: center;
+//      display: flex;
+//      justify-content: center;
+//      cursor: pointer;
+//      align-items: center;
+//
+//      &_urgent {
+//        background: @urgent;
+//
+//        &:hover {
+//          background: @urgent-active;
+//        }
+//      }
+//
+//      &_high {
+//        background: @high;
+//
+//        &:hover {
+//          background: @high-active;
+//        }
+//      }
+//
+//      &_middle {
+//        background: @middle;
+//
+//        &:hover {
+//          background: @middle-active;
+//        }
+//      }
+//
+//      &_low {
+//        background: @low;
+//
+//        &:hover {
+//          background: @low-active;
+//        }
+//      }
+//
+//      &-tomato {
+//        position: relative;
+//        font-size: 48px;
+//        color: @white;
+//
+//        &-digit {
+//          position: absolute;
+//          font-size: 24px;
+//          top: calc(50% - 12px);
+//          left: calc(50% - 6px);
+//        }
+//      }
+//    }
+//  }
+//}
+
+//For global tasks lists
+//.global-task-list-title-tabs {
+//  display: flex;
+//  justify-content: space-between;
+//
+//  &__left,
+//  &__right {
+//    display: flex;
+//    cursor: pointer;
+//  }
+//
+//  &__elem {
+//    background: @general-background;
+//    font: 400 18px/20px "PT Sans", sans-serif;
+//    outline: none;
+//    border: none;
+//    color: @nepal;
+//    .hover_focus_active(@spray);
+//    @media @min-width-screen {
+//      letter-spacing: 0;
+//    }
+//    @media (min-width: 585px) {
+//      font: 400 22px/24px "PT Sans", sans-serif;
+//      letter-spacing: 0;
+//    }
+//    @media @breakpoint-mobile {
+//      font: 400 16px/16px "PT Sans", sans-serif;
+//      padding: 0 8px 0 0;
+//    }
+//  }
+//
+//  &__separate-line {
+//    width: 1px;
+//    height: 16px;
+//    background: @nepal;
+//    margin: 7px 14px 0;
+//    .hover_focus_active(@spray);
+//
+//    @media @breakpoint-mobile {
+//      height: 12px;
+//      margin-top: 5px;
+//    }
+//  }
+//
+//  &__arrow-down,
+//  &__arrow-right {
+//    color: @nepal;
+//    font-size: 13px;
+//    .hover_focus_active(@spray);
+//
+//    @media @min-width-screen {
+//      padding: 5px 0 0 5px;
+//    }
+//
+//    @media @breakpoint-mobile {
+//      padding: 5px 0 0 14px;
+//    }
+//  }
+//}
+
+//.global-task-list-content {
+//  &-category {
+//    margin: 0 0 56px 0;
+//    padding: 0;
+//    position: relative;
+//    list-style-type: none;
+//    @media @breakpoint-mobile {
+//      margin: 0 0 48px 0;
+//    }
+//
+//    &_work {
+//      box-shadow: 8px 0 @work inset;
+//    }
+//
+//    &_education {
+//      box-shadow: 8px 0 @education inset;
+//    }
+//
+//    &_hobby {
+//      box-shadow: 8px 0 @hobby inset;
+//    }
+//
+//    &_sport {
+//      box-shadow: 8px 0 @sport inset;
+//    }
+//
+//    &_other {
+//      box-shadow: 8px 0 @other inset;
+//    }
+//
+//    &__title {
+//      padding-bottom: 10px;
+//      cursor: pointer;
+//
+//      &_circle {
+//        display: inline-block;
+//        width: 16px;
+//        height: 16px;
+//        border-radius: 50%;
+//        position: relative;
+//        top: -2px;
+//        left: -3px;
+//
+//        &_work {
+//          background: @work;
+//
+//          &:hover {
+//            background: @work-active;
+//          }
+//        }
+//
+//        &_education {
+//          background: @education;
+//
+//          &:hover {
+//            background: @education-active;
+//          }
+//        }
+//
+//        &_hobby {
+//          background: @hobby;
+//
+//          &:hover {
+//            background: @hobby-active;
+//          }
+//        }
+//
+//        &_sport {
+//          background: @sport;
+//
+//          &:hover {
+//            background: @sport-active;
+//          }
+//        }
+//
+//        &_other {
+//          background: @other;
+//
+//          &:hover {
+//            background: @other-active;
+//          }
+//        }
+//
+//        &:before {
+//          top: 5px;
+//          left: 5px;
+//          position: absolute;
+//          content: "";
+//          display: inline-block;
+//          width: 6px;
+//          height: 6px;
+//          border-radius: 50%;
+//          border: 1px solid black;
+//        }
+//      }
+//
+//      &_text {
+//        font: 700 16px/20px "Roboto", sans-serif;
+//        letter-spacing: 0;
+//        padding-left: 10px;
+//
+//        &_work {
+//          color: @work;
+//
+//          &:hover {
+//            color: @work-active;
+//          }
+//        }
+//
+//        &_education {
+//          color: @education;
+//
+//          &:hover {
+//            color: @education-active;
+//          }
+//        }
+//
+//        &_hobby {
+//          color: @hobby;
+//
+//          &:hover {
+//            color: @hobby-active;
+//          }
+//        }
+//
+//        &_sport {
+//          color: @sport;
+//
+//          &:hover {
+//            color: @sport-active;
+//          }
+//        }
+//
+//        &_other {
+//          color: @other;
+//
+//          &:hover {
+//            color: @other-active;
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
+
+//For add first task
+//.empty-page-add-task {
+//  text-align: center;
+//
+//  &__icon-svg {
+//    width: 212px;
+//    height: 212px;
+//    margin: 288px 0 64px 0;
+//    @media @breakpoint-mobile {
+//      width: 164px;
+//      height: 164px;
+//      margin: 156px 0 64px 0;
+//    }
+//  }
+//
+//  &__text {
+//    font: 300 36px/48px "Roboto", sans-serif;
+//    font-family: "", sans-serif;
+//    letter-spacing: 0;
+//    color: @nepal;
+//    margin-bottom: 353px;
+//    @media @breakpoint-mobile {
+//      font-size: 30px;
+//      line-height: 42px;
+//      margin-bottom: 231px;
+//    }
+//  }
+//}
+
+////Block Task added
+//.move-tasks-to-daily-task-list {
+//  text-align: center;
+//
+//  &__text {
+//    font: 300 30px/42px "Roboto", sans-serif;
+//    letter-spacing: 0;
+//    color: @nepal;
+//    margin: 64px 0 24px 0;
+//    @media @breakpoint-mobile {
+//      margin: 70px 0 36px 0;
+//    }
+//  }
+//
+//  &__icon-arrow-circle {
+//    font-size: 56px;
+//    color: @nepal;
+//    margin: 0 0 108px 0;
+//    @media @breakpoint-mobile {
+//      margin: 0 0 40px 0;
+//    }
+//  }
+//}
+
+//.excellent-tasks-done {
+//  text-align: center;
+//
+//  &__text {
+//    font: 300 30px/42px "Roboto", sans-serif;
+//    letter-spacing: 0;
+//    color: @nepal;
+//    margin: 78px 0 112px 0;
+//    @media @breakpoint-mobile {
+//      margin: 32px 0 120px 0;
+//    }
+//  }
+//}
+
+//.first-time-visit-page,
+//.first-entrance-page {
+//  text-align: center;
+//
+//  &__icon-svg {
+//    width: 212px;
+//    height: 198px;
+//    margin: 290px 0 64px;
+//
+//    @media @breakpoint-mobile {
+//      width: 171px;
+//      height: 160px;
+//      margin: 112px 0 56px;
+//    }
+//
+//    &-to-do-done {
+//      margin: 208px 0 64px;
+//      @media @breakpoint-mobile {
+//        margin: 70px 0 56px;
+//      }
+//    }
+//  }
+//
+//  &__text {
+//    font: 300 36px/46px "Roboto", sans-serif;
+//    color: @nepal;
+//    margin: 0 0 154px;
+//
+//    @media @breakpoint-mobile {
+//      margin: 0 0 56px;
+//    }
+//
+//    &_without-buttons {
+//      margin: 0 0 236px;
+//
+//      @media @breakpoint-mobile {
+//        margin: 0 0 226px;
+//      }
+//    }
+//  }
+//
+//  &__buttons {
+//    display: flex;
+//    justify-content: space-between;
+//    margin: 0 0 48px;
+//
+//    @media @breakpoint-mobile {
+//      margin: 0 0 144px ;
+//      justify-content: center;
+//    }
+//
+//    &-skip {
+//      .styles_for_buttons(48.5%, 97px, 20px, 0, 4%);
+//      .state_for_blue_button();
+//    }
+//
+//    &-go-to-settings {
+//      .styles_for_buttons(48.5%, 173px, 20px, 0, 0);
+//      .state_for_green_button();
+//    }
+//  }
+//}
+
+//.block-with-notification {
+//  display: flex;
+//  flex-direction: column;
+//  position: absolute;
+//  bottom: 0;
+//  right: 0;
+//
+//  &__item {
+//    width: 100%;
+//    align-self: flex-end;
+//    display: flex;
+//    justify-content: space-between;
+//    border-radius: 4px;
+//    border: 1px solid @white;
+//    margin-bottom: 10px;
+//    cursor: pointer;
+//
+//    &_type_no-category {
+//      background: @education-active;
+//    }
+//
+//    &_type_urgent {
+//      background: @urgent-active;
+//    }
+//
+//    &_type_high {
+//      background: @high-active;
+//    }
+//
+//    &_type_low {
+//      background: @low-active;
+//    }
+//
+//    @media @breakpoint-mobile {
+//      max-width: 456px;
+//    }
+//    @media @breakpoint-desktop {
+//      max-width: 496px;
+//    }
+//
+//    &-left {
+//      &_type_no-category {
+//        background: @education;
+//      }
+//
+//      &_type_urgent {
+//        background: @urgent;
+//      }
+//
+//      &_type_high {
+//        background: @high;
+//      }
+//
+//      &_type_low {
+//        background: @low;
+//      }
+//
+//      &-icon {
+//        font-size: 48px;
+//        padding: 12px 20px;
+//        color: @white;
+//        @media @breakpoint-mobile {
+//          font-size: 32px;
+//        }
+//      }
+//    }
+//
+//    &-right {
+//      display: flex;
+//      justify-content: space-between;
+//      align-items: center;
+//      width: 100%;
+//      padding: 0 20px;
+//
+//      &-text {
+//        font: 700 22px/24px "Roboto", sans-serif;
+//        letter-spacing: 0;
+//        color: @white;
+//        @media @breakpoint-mobile {
+//          font-size: 15px;
+//          line-height: 16px;
+//          padding: 0 16px;
+//        }
+//      }
+//
+//      &-icon {
+//        font-size: 32px;
+//        color: @white;
+//        @media @breakpoint-mobile {
+//          font-size: 24px;
+//        }
+//      }
+//    }
+//  }
+//}
+

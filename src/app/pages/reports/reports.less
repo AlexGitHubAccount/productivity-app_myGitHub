@@ -1,0 +1,55 @@
+/* helpers */
+@import (reference) "../../../assets/less/helpers/_variables.less";
+@import (reference) "../../../assets/less/helpers/_mixins.less";
+
+/* base styles */
+@import "../../../assets/less/base/_typography.less";
+
+//General css rules for page reports
+.reports-general-flex-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    margin-top: 48px;
+
+    @media @breakpoint-mobile {
+      margin-top: 46px;
+    }
+  }
+
+  &__reports-heading-h1 {
+    margin-top: -30px;
+
+    @media @breakpoint-mobile {
+      margin-top: 18px;
+    }
+  }
+
+  &__reports-tabs {
+    margin: 46px 0 141px 0;
+
+    @media @breakpoint-mobile {
+      margin-top: 32px;
+    }
+
+    &-pomodoros-tasks {
+      margin-bottom: 88px;
+
+      @media @breakpoint-mobile {
+        margin-bottom: 138px;
+      }
+      @media @breakpoint-desktop {
+        margin-bottom: 156px;
+      }
+    }
+  }
+
+  &__reports-graph {
+    margin-bottom: 191px;
+
+    @media @breakpoint-mobile {
+      margin-bottom: 64px;
+    }
+  }
+}
